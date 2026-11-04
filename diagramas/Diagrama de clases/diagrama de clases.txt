@@ -1,0 +1,19 @@
+6. Diagrama de clases
+
+¿Dónde hacer?: Draw.io, StarUML o Visual Paradigm.
+
+Formatos obligatorios: diagrama_clases.drawio, diagrama_clases.png.
+
+Entidades principales y Atributos:
+
+Usuario (id, nombre, email, rol, password)
+
+Estudiante inherits Usuario (carrera, semestre)
+
+Tutor inherits Usuario (especialidad, calificacionPromedio)
+
+Disponibilidad (id, idTutor, diaSemana, horaInicio, horaFin, ocupado)
+
+Tutoria (id, idEstudiante, idTutor, materia, fecha, estado, linkReunion)
+
+AlgoritmoSeleccion (poblacion, tasaMutacion, funcionFitness())

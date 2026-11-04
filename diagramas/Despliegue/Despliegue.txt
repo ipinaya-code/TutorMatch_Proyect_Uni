@@ -1,0 +1,15 @@
+4. Despliegue
+
+¿Dónde hacer?: Draw.io (Librería UML Deployment / Cloud Architecture icons).
+
+Formatos obligatorios: diagrama_despliegue.drawio, diagrama_despliegue.png.
+
+Cómo estructurarlo:
+
+Dispositivo Cliente: Navegador / Celular (PWA Service Worker en almacenamiento local).
+
+Hosting / CDN: Vercel / Netlify (Hosting del Build de React).
+
+Servidor Backend / Nube: Node.js Express API / Docker container en AWS/GCP.
+
+Base de Datos: Instancia gestionada SQL.

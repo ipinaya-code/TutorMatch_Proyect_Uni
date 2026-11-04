@@ -1,0 +1,23 @@
+7. Diagramas de Secuencia
+
+¿Dónde hacer?: Draw.io (UML Sequence) o Mermaid.
+
+Formatos obligatorios: secuencia_agendamiento.drawio, secuencia_agendamiento.png.
+
+Cómo estructurarlo (Ejemplo Flujo de Reserva):
+
+Participantes: Estudiante UI, AppShell, SchedulerController, GeneticEngine, Base de Datos.
+
+Mensajes:
+
+solicitarTutoria(materia, preferencia)
+
+obtenerDisponibilidades()
+
+calcularMejorMatch(estudiante, tutores)
+
+retornarPropuestas()
+
+confirmarReserva()
+
+notificarUsuarios()

@@ -1,0 +1,13 @@
+1. Árbol de problemas
+
+¿Dónde hacer?: Draw.io, Miro o Word (SmartArt / Jerarquía).
+
+Formatos obligatorios: arbol_problemas.drawio (o arbol_problemas.docx), arbol_problemas.png.
+
+Cómo estructurarlo:
+
+Efectos (Copas/Ramas): Bajo rendimiento académico, deserción universitaria, frustración del estudiante, baja eficiencia de coordinación.
+
+Problema Central (Tronco): Ineficiente gestión y emparejamiento manual de tutorías académicas entre estudiantes y tutores.
+
+Causas Raíz (Raíces): Falta de canal unificado, cruces de horarios, falta de trazabilidad, procesos manuales de asignación.

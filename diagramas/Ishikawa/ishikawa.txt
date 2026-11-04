@@ -1,0 +1,17 @@
+11. Ishikawa (Causa-Efecto / Diagrama Espina de Pescado)
+
+¿Dónde hacer?: Draw.io, Excel o Word (Formas compuestas).
+
+Formatos obligatorios: diagrama_ishikawa.drawio (o ishikawa.xlsx), diagrama_ishikawa.png.
+
+Estructura (Las 6Ms / Categorías de software):
+
+Problema: Retardo y desemparejamiento en la concertación de tutorías universitarias.
+
+Métodos: Falta de automatización, comunicación informal por WhatsApp.
+
+Mano de obra (Usuarios): Falta de actualización de disponibilidad por tutores.
+
+Medio Ambiente: Coincidencia con exámenes parciales, falta de espacios físicos.
+
+Tecnología/Sistemas: Sistemas institucionales desactualizados, falta de PWA móvil.

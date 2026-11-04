@@ -1,0 +1,13 @@
+2. Arquitectura
+
+¿Dónde hacer?: Draw.io (Lienzo C4 Model / Diagrama de Componentes).
+
+Formatos obligatorios: arquitectura_pwa.drawio, arquitectura_pwa.png.
+
+Cómo estructurarlo:
+
+Capa de Presentación (Frontend): PWA en React + Vite + Tailwind CSS (Service Worker, Web Manifest, LocalStorage/IndexedDB).
+
+Capa de Aplicación y Algoritmos: Módulo de Optimización de Horarios (scheduler.js), Algoritmo Genético de Matcheo (genetic.js), Gestor de Estado (store.js).
+
+Capa de Servicios y Persistencia: API Backend REST/GraphQL, Base de Datos (PostgreSQL/Supabase/Firebase).

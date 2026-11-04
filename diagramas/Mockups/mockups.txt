@@ -1,0 +1,17 @@
+12. Mockups
+
+¿Dónde hacer?: Figma, Balsamiq, Draw.io (Wireframe UI kit) o screenshots del frontend funcional de React (/pwa-tutorias/js/pages).
+
+Formatos obligatorios: mockups_pantallas.drawio (o proyecto Figma/PDF), carpetas de capturas PNG.
+
+Pantallas obligatorias:
+
+01_LandingPage.png (Landing hero y objetivos)
+
+02_Login_Registro.png (Auth.jsx)
+
+03_Panel_Estudiante.png (StudentPanel.jsx y búsqueda)
+
+04_Panel_Tutor.png (TutorPanel.jsx y AvailabilityGrid.jsx)
+
+05_Panel_Coordinador.png (CoordPanel.jsx y monitor de algoritmo genético)

@@ -1,0 +1,15 @@
+3. Caso de uso
+
+¿Dónde hacer?: Draw.io (Librería de diagramas de casos de uso UML).
+
+Formatos obligatorios: casos_de_uso.drawio, casos_de_uso.png, especificacion_casos_uso.docx.
+
+Cómo estructurarlo:
+
+Actores: Estudiante, Tutor, Coordinador.
+
+Casos de Uso Estudiante: Registrar Disponibilidad, Buscar Tutor, Solicitar Tutoría, Calificar Sesión.
+
+Casos de Uso Tutor: Configurar Matriz de Horarios, Aceptar/Rechazar Solicitud, Registrar Informe de Asesoría.
+
+Casos de Uso Coordinador: Ejecutar Algoritmo de Asignación Automática, Supervisar Métricas, Gestionar Usuarios.

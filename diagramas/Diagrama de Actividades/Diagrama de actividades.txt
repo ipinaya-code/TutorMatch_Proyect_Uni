@@ -1,0 +1,21 @@
+5. Diagrama de Actividades
+
+¿Dónde hacer?: Draw.io (Librería UML Activity Diagram con carriles/swimlanes).
+
+Formatos obligatorios: diagrama_actividades.drawio, diagrama_actividades.png.
+
+Cómo estructurarlo:
+
+Dividir en 3 carriles (Swimlanes): Estudiante, Sistema TutorMatch, Tutor.
+
+Flujo:
+
+Estudiante selecciona materia y rango horaria.
+
+Sistema procesa la solicitud mediante el motor de búsqueda/algoritmo genético.
+
+Sistema notifica al tutor asignado.
+
+Tutor confirma la disponibilidad.
+
+Sistema genera el enlace de la reunión y actualiza ambas agendas.

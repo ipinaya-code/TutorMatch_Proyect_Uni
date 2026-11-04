@@ -1,0 +1,21 @@
+10. Flujo de datos (DFD)
+
+¿Dónde hacer?: Draw.io (Librería DFD Data Flow Diagrams - Gane & Sarson o Yourdon).
+
+Formatos obligatorios: dfd_nivel_0.drawio, dfd_nivel_1.drawio, dfd_tutorias.png.
+
+Nivel 0 (Diagrama de Contexto):
+
+Entidades externas: Estudiante, Tutor, Coordinador.
+
+Proceso Central: 0.0 Sistema General TutorMatch PWA.
+
+Nivel 1:
+
+Proceso 1.0: Autenticación y Perfiles.
+
+Proceso 2.0: Gestión de Horarios y Disponibilidad.
+
+Proceso 3.0: Motor de Emparejamiento (Algoritmo Genético).
+
+Proceso 4.0: Reportes y Notificaciones.

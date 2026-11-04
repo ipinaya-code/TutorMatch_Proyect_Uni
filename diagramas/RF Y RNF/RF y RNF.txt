@@ -1,0 +1,25 @@
+13. RF Y RNF (Requisitos Funcionales y No Funcionales)
+
+¿Dónde hacer?: Microsoft Word (.docx) o Microsoft Excel (.xlsx).
+
+Formatos obligatorios: Matriz_Requisitos_RF_RNF.xlsx (o .docx), resumen_requisitos.png.
+
+Cómo estructurarlo:
+
+Requisitos Funcionales (RF):
+
+RF-01: Permitir el registro e inicio de sesión con roles diferenciados.
+
+RF-02: Permitir al tutor seleccionar su disponibilidad mediante la matriz horaria (AvailabilityGrid).
+
+RF-03: Ejecutar la asignación de tutorías optimizada con el algoritmo genético.
+
+RF-04: Enviar notificaciones y permitir la descarga PWA de forma offline-first.
+
+Requisitos No Funcionales (RNF):
+
+RNF-01 (Usabilidad): Diseño web responsivo PWA adaptado a dispositivos móviles.
+
+RNF-02 (Rendimiento): El tiempo de emparejamiento del algoritmo no debe superar los 2 segundos.
+
+RNF-03 (Seguridad): Cifrado de contraseñas y validación de tokens en cada solicitud.
