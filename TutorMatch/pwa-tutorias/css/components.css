@@ -1,8 +1,0 @@
-.wrap { @apply mx-auto w-full max-w-6xl px-5 sm:px-8; }
-.section { @apply py-20 sm:py-28; }
-.btn { @apply inline-flex items-center justify-center rounded-full px-6 py-3 font-display font-bold transition-transform active:scale-95; }
-.btn-primary { @apply bg-ambar text-ink hover:bg-bone; }
-.btn-ghost { @apply border border-bone/30 text-bone hover:border-cian hover:text-cian; }
-.chip { @apply rounded-full border border-bone/20 px-3 py-1 text-sm text-bone/80; }
-.panel { @apply rounded-xl border border-bone/10 bg-ink2 p-5; }
-.input { @apply w-full rounded-lg border border-bone/20 bg-ink px-3 py-2 text-bone; }
