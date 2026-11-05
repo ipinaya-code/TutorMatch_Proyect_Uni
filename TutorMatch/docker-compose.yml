@@ -1,0 +1,45 @@
+services:
+  # ---------------------------------------------------
+  # Servicio 1: Base de Datos PostgreSQL
+  # ---------------------------------------------------
+  postgres_db:
+    image: postgres:15-alpine
+    container_name: tutormatch_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: tutormatch_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgrespassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      # Este script se ejecuta automáticamente la primera vez que se crea la base de datos
+      - ./backend/init_db/01_init.sql:/docker-entrypoint-initdb.d/01_init.sql
+
+  # ---------------------------------------------------
+  # Servicio 2: Backend API (Python / FastAPI)
+  # ---------------------------------------------------
+  backend_api:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: tutormatch_api
+    restart: always
+    depends_on:
+      - postgres_db
+    environment:
+      DB_HOST: postgres_db
+      DB_PORT: 5432
+      DB_NAME: tutormatch_db
+      DB_USER: postgres
+      DB_PASSWORD: postgrespassword
+    ports:
+      - "8000:8000"
+    volumes:
+      # Sincroniza la carpeta local con el contenedor para recarga en vivo sin reiniciar Docker
+      - ./backend:/app
+
+volumes:
+  postgres_data:
+

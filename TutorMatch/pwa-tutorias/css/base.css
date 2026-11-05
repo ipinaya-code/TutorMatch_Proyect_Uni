@@ -1,0 +1,14 @@
+@import './components.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body {
+  @apply bg-ink text-bone font-body antialiased;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+h1, h2, h3 { @apply font-display; }
+:focus-visible { outline: 2px solid #F8D800; outline-offset: 3px; }
