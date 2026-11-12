@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_Tutorias" targetNamespace="https://ejemplo.edu.bo/tutorias" exporter="Camunda Web Modeler" exporterVersion="b9fb551" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.10.0">
+  <bpmn:process id="Proceso_Asignacion_Inteligente" name="Gestión inteligente de tutorías de trabajo de grado (TO-BE)" isExecutable="false">
+    <bpmn:laneSet id="LaneSet_1">
+      <bpmn:lane id="Lane_3" name="Docente tutor">
+        <bpmn:flowNodeRef>Task_update</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_teacherconfirm</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_teacherok</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_2" name="Coordinación académica">
+        <bpmn:flowNodeRef>Task_manual</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_adjust</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_review</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_reassign</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_approved</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_1" name="Sistema PWA con REDES NEURONALES">
+        <bpmn:flowNodeRef>Task_validate</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_profile</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_nn</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_register</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_propose</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_availability</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_valid</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_end</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_candidate</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_slots</bpmn:flowNodeRef>
+      </bpmn:lane>
+      <bpmn:lane id="Lane_0" name="Estudiante">
+        <bpmn:flowNodeRef>Task_submit</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_correct</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_studentconfirm</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_alternate</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_start</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Task_studentok</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="Task_start" name="Necesita tutor de grado">
+      <bpmn:outgoing>Flow_00</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:userTask id="Task_submit" name="Registra tema, resumen y disponibilidad">
+      <bpmn:incoming>Flow_00</bpmn:incoming>
+      <bpmn:incoming>Flow_04</bpmn:incoming>
+      <bpmn:outgoing>Flow_01</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="Task_validate" name="Valida datos de solicitud">
+      <bpmn:incoming>Flow_01</bpmn:incoming>
+      <bpmn:outgoing>Flow_02</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="Task_valid" name="¿Datos completos?">
+      <bpmn:incoming>Flow_02</bpmn:incoming>
+      <bpmn:outgoing>Flow_03</bpmn:outgoing>
+      <bpmn:outgoing>Flow_05</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="Task_correct" name="Completa o corrige solicitud">
+      <bpmn:incoming>Flow_03</bpmn:incoming>
+      <bpmn:outgoing>Flow_04</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="Task_profile" name="Analiza tema y perfil del proyecto">
+      <bpmn:incoming>Flow_05</bpmn:incoming>
+      <bpmn:outgoing>Flow_06</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="Task_nn" name="Red neuronal clasifica afinidad tutor–tema">
+      <bpmn:incoming>Flow_06</bpmn:incoming>
+      <bpmn:outgoing>Flow_07</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="Task_candidate" name="¿Tutor candidato?">
+      <bpmn:incoming>Flow_07</bpmn:incoming>
+      <bpmn:outgoing>Flow_08</bpmn:outgoing>
+      <bpmn:outgoing>Flow_09</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="Task_manual" name="Revisa opciones sin coincidencia">
+      <bpmn:incoming>Flow_08</bpmn:incoming>
+      <bpmn:outgoing>Flow_10</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Task_review" name="Evalúa recomendación y requisitos">
+      <bpmn:incoming>Flow_09</bpmn:incoming>
+      <bpmn:incoming>Flow_10</bpmn:incoming>
+      <bpmn:incoming>Flow_13</bpmn:incoming>
+      <bpmn:incoming>Flow_26</bpmn:incoming>
+      <bpmn:outgoing>Flow_11</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="Task_approved" name="¿Aprueba tutor?">
+      <bpmn:incoming>Flow_11</bpmn:incoming>
+      <bpmn:outgoing>Flow_12</bpmn:outgoing>
+      <bpmn:outgoing>Flow_14</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="Task_adjust" name="Revisa otro candidato">
+      <bpmn:incoming>Flow_12</bpmn:incoming>
+      <bpmn:outgoing>Flow_13</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="Task_availability" name="Cruza horarios y cupos de tutoría">
+      <bpmn:incoming>Flow_14</bpmn:incoming>
+      <bpmn:incoming>Flow_17</bpmn:incoming>
+      <bpmn:incoming>Flow_22</bpmn:incoming>
+      <bpmn:outgoing>Flow_15</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:exclusiveGateway id="Task_slots" name="¿Horario compatible?">
+      <bpmn:incoming>Flow_15</bpmn:incoming>
+      <bpmn:outgoing>Flow_16</bpmn:outgoing>
+      <bpmn:outgoing>Flow_18</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="Task_update" name="Actualiza su disponibilidad">
+      <bpmn:incoming>Flow_16</bpmn:incoming>
+      <bpmn:outgoing>Flow_17</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="Task_propose" name="Genera propuesta tutor y horario">
+      <bpmn:incoming>Flow_18</bpmn:incoming>
+      <bpmn:outgoing>Flow_19</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:userTask id="Task_studentconfirm" name="Acepta propuesta de tutoría">
+      <bpmn:incoming>Flow_19</bpmn:incoming>
+      <bpmn:outgoing>Flow_20</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="Task_studentok" name="¿Acepta?">
+      <bpmn:incoming>Flow_20</bpmn:incoming>
+      <bpmn:outgoing>Flow_21</bpmn:outgoing>
+      <bpmn:outgoing>Flow_23</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="Task_alternate" name="Solicita alternativa">
+      <bpmn:incoming>Flow_21</bpmn:incoming>
+      <bpmn:outgoing>Flow_22</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="Task_teacherconfirm" name="Confirma asignación y horario">
+      <bpmn:incoming>Flow_23</bpmn:incoming>
+      <bpmn:outgoing>Flow_24</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="Task_teacherok" name="¿Confirma?">
+      <bpmn:incoming>Flow_24</bpmn:incoming>
+      <bpmn:outgoing>Flow_25</bpmn:outgoing>
+      <bpmn:outgoing>Flow_27</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="Task_reassign" name="Gestiona nueva asignación">
+      <bpmn:incoming>Flow_25</bpmn:incoming>
+      <bpmn:outgoing>Flow_26</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:serviceTask id="Task_register" name="Registra tutoría y notifica a todos">
+      <bpmn:incoming>Flow_27</bpmn:incoming>
+      <bpmn:outgoing>Flow_28</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="Task_end" name="Tutoría programada">
+      <bpmn:incoming>Flow_28</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_00" sourceRef="Task_start" targetRef="Task_submit" />
+    <bpmn:sequenceFlow id="Flow_01" sourceRef="Task_submit" targetRef="Task_validate" />
+    <bpmn:sequenceFlow id="Flow_02" sourceRef="Task_validate" targetRef="Task_valid" />
+    <bpmn:sequenceFlow id="Flow_03" name="No" sourceRef="Task_valid" targetRef="Task_correct" />
+    <bpmn:sequenceFlow id="Flow_04" sourceRef="Task_correct" targetRef="Task_submit" />
+    <bpmn:sequenceFlow id="Flow_05" name="Sí" sourceRef="Task_valid" targetRef="Task_profile" />
+    <bpmn:sequenceFlow id="Flow_06" sourceRef="Task_profile" targetRef="Task_nn" />
+    <bpmn:sequenceFlow id="Flow_07" sourceRef="Task_nn" targetRef="Task_candidate" />
+    <bpmn:sequenceFlow id="Flow_08" name="No" sourceRef="Task_candidate" targetRef="Task_manual" />
+    <bpmn:sequenceFlow id="Flow_09" name="Sí" sourceRef="Task_candidate" targetRef="Task_review" />
+    <bpmn:sequenceFlow id="Flow_10" sourceRef="Task_manual" targetRef="Task_review" />
+    <bpmn:sequenceFlow id="Flow_11" sourceRef="Task_review" targetRef="Task_approved" />
+    <bpmn:sequenceFlow id="Flow_12" name="No" sourceRef="Task_approved" targetRef="Task_adjust" />
+    <bpmn:sequenceFlow id="Flow_13" sourceRef="Task_adjust" targetRef="Task_review" />
+    <bpmn:sequenceFlow id="Flow_14" name="Sí" sourceRef="Task_approved" targetRef="Task_availability" />
+    <bpmn:sequenceFlow id="Flow_15" sourceRef="Task_availability" targetRef="Task_slots" />
+    <bpmn:sequenceFlow id="Flow_16" name="No" sourceRef="Task_slots" targetRef="Task_update" />
+    <bpmn:sequenceFlow id="Flow_17" sourceRef="Task_update" targetRef="Task_availability" />
+    <bpmn:sequenceFlow id="Flow_18" name="Sí" sourceRef="Task_slots" targetRef="Task_propose" />
+    <bpmn:sequenceFlow id="Flow_19" sourceRef="Task_propose" targetRef="Task_studentconfirm" />
+    <bpmn:sequenceFlow id="Flow_20" sourceRef="Task_studentconfirm" targetRef="Task_studentok" />
+    <bpmn:sequenceFlow id="Flow_21" name="No" sourceRef="Task_studentok" targetRef="Task_alternate" />
+    <bpmn:sequenceFlow id="Flow_22" sourceRef="Task_alternate" targetRef="Task_availability" />
+    <bpmn:sequenceFlow id="Flow_23" name="Sí" sourceRef="Task_studentok" targetRef="Task_teacherconfirm" />
+    <bpmn:sequenceFlow id="Flow_24" sourceRef="Task_teacherconfirm" targetRef="Task_teacherok" />
+    <bpmn:sequenceFlow id="Flow_25" name="No" sourceRef="Task_teacherok" targetRef="Task_reassign" />
+    <bpmn:sequenceFlow id="Flow_26" sourceRef="Task_reassign" targetRef="Task_review" />
+    <bpmn:sequenceFlow id="Flow_27" name="Sí" sourceRef="Task_teacherok" targetRef="Task_register" />
+    <bpmn:sequenceFlow id="Flow_28" sourceRef="Task_register" targetRef="Task_end" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Proceso_Asignacion_Inteligente">
+      <bpmndi:BPMNShape id="Shape_Lane_3" bpmnElement="Lane_3" isHorizontal="true">
+        <dc:Bounds x="160" y="800" width="3580" height="200" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Lane_2" bpmnElement="Lane_2" isHorizontal="true">
+        <dc:Bounds x="160" y="530" width="3580" height="270" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Lane_1" bpmnElement="Lane_1" isHorizontal="true">
+        <dc:Bounds x="160" y="325" width="3580" height="205" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Lane_0" bpmnElement="Lane_0" isHorizontal="true">
+        <dc:Bounds x="160" y="80" width="3580" height="245" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_start" bpmnElement="Task_start">
+        <dc:Bounds x="275" y="208" width="42" height="42" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="254" y="250" width="84" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_submit" bpmnElement="Task_submit">
+        <dc:Bounds x="380" y="195" width="155" height="65" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_validate" bpmnElement="Task_validate">
+        <dc:Bounds x="580" y="395" width="145" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_valid" bpmnElement="Task_valid" isMarkerVisible="true">
+        <dc:Bounds x="780" y="401" width="52" height="52" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="778" y="453" width="57" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_profile" bpmnElement="Task_profile">
+        <dc:Bounds x="920" y="395" width="155" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_nn" bpmnElement="Task_nn">
+        <dc:Bounds x="1130" y="395" width="180" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_candidate" bpmnElement="Task_candidate" isMarkerVisible="true">
+        <dc:Bounds x="1370" y="401" width="52" height="52" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1351" y="377" width="89" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_register" bpmnElement="Task_register">
+        <dc:Bounds x="3410" y="395" width="165" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_end" bpmnElement="Task_end">
+        <dc:Bounds x="3630" y="402" width="42" height="42" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3621" y="444" width="60" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_correct" bpmnElement="Task_correct">
+        <dc:Bounds x="925" y="196" width="145" height="65" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_manual" bpmnElement="Task_manual">
+        <dc:Bounds x="1316" y="697" width="160" height="65" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_adjust" bpmnElement="Task_adjust">
+        <dc:Bounds x="2055" y="672" width="150" height="55" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_review" bpmnElement="Task_review">
+        <dc:Bounds x="1620" y="617" width="160" height="65" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_approved" bpmnElement="Task_approved" isMarkerVisible="true">
+        <dc:Bounds x="1904" y="646" width="52" height="52" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1890" y="708" width="80" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_propose" bpmnElement="Task_propose">
+        <dc:Bounds x="2610" y="395" width="160" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_availability" bpmnElement="Task_availability">
+        <dc:Bounds x="2170" y="395" width="160" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_slots" bpmnElement="Task_slots" isMarkerVisible="true">
+        <dc:Bounds x="2414" y="399" width="52" height="52" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2410" y="361.5" width="60" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_studentconfirm" bpmnElement="Task_studentconfirm">
+        <dc:Bounds x="2592" y="147" width="155" height="65" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_studentok" bpmnElement="Task_studentok" isMarkerVisible="true">
+        <dc:Bounds x="2874" y="154" width="52" height="52" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2876" y="130" width="48" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_alternate" bpmnElement="Task_alternate">
+        <dc:Bounds x="3075" y="152" width="150" height="55" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_reassign" bpmnElement="Task_reassign">
+        <dc:Bounds x="3415" y="617" width="155" height="65" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_update" bpmnElement="Task_update">
+        <dc:Bounds x="2360" y="860" width="160" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_teacherconfirm" bpmnElement="Task_teacherconfirm">
+        <dc:Bounds x="2820" y="860" width="160" height="60" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_teacherok" bpmnElement="Task_teacherok" isMarkerVisible="true">
+        <dc:Bounds x="3194" y="864" width="52" height="52" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3191" y="926" width="58" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Edge_00" bpmnElement="Flow_00">
+        <di:waypoint x="317" y="229" />
+        <di:waypoint x="380" y="227.5" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_04" bpmnElement="Flow_04">
+        <di:waypoint x="998" y="196" />
+        <di:waypoint x="998" y="122" />
+        <di:waypoint x="457.5" y="122" />
+        <di:waypoint x="458" y="195" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_01" bpmnElement="Flow_01">
+        <di:waypoint x="535" y="227.5" />
+        <di:waypoint x="557.5" y="227.5" />
+        <di:waypoint x="557.5" y="425" />
+        <di:waypoint x="580" y="425" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_02" bpmnElement="Flow_02">
+        <di:waypoint x="725" y="425" />
+        <di:waypoint x="780" y="427" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_03" bpmnElement="Flow_03">
+        <di:waypoint x="806" y="401" />
+        <di:waypoint x="806" y="227.5" />
+        <di:waypoint x="925" y="229" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="814" y="305" width="15" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_05" bpmnElement="Flow_05">
+        <di:waypoint x="832" y="427" />
+        <di:waypoint x="920" y="425" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="871" y="401" width="11" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_06" bpmnElement="Flow_06">
+        <di:waypoint x="1075" y="425" />
+        <di:waypoint x="1130" y="425" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_07" bpmnElement="Flow_07">
+        <di:waypoint x="1310" y="425" />
+        <di:waypoint x="1370" y="427" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_08" bpmnElement="Flow_08">
+        <di:waypoint x="1396" y="453" />
+        <di:waypoint x="1396" y="697" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1362" y="460" width="15" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_09" bpmnElement="Flow_09">
+        <di:waypoint x="1421" y="426" />
+        <di:waypoint x="1700" y="420" />
+        <di:waypoint x="1700" y="617" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1434" y="401" width="11" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_27" bpmnElement="Flow_27">
+        <di:waypoint x="3220" y="864" />
+        <di:waypoint x="3220" y="425" />
+        <di:waypoint x="3410" y="425" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3230" y="843" width="11" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_28" bpmnElement="Flow_28">
+        <di:waypoint x="3575" y="425" />
+        <di:waypoint x="3630" y="423" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_10" bpmnElement="Flow_10">
+        <di:waypoint x="1476" y="730" />
+        <di:waypoint x="1535" y="730" />
+        <di:waypoint x="1535" y="650" />
+        <di:waypoint x="1620" y="650" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_12" bpmnElement="Flow_12">
+        <di:waypoint x="1956" y="672" />
+        <di:waypoint x="2055" y="672" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1962" y="657" width="15" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_13" bpmnElement="Flow_13">
+        <di:waypoint x="2130" y="672" />
+        <di:waypoint x="2130" y="554" />
+        <di:waypoint x="1700" y="554" />
+        <di:waypoint x="1700" y="617" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_26" bpmnElement="Flow_26">
+        <di:waypoint x="3415" y="657" />
+        <di:waypoint x="2670" y="720" />
+        <di:waypoint x="1700" y="780" />
+        <di:waypoint x="1700" y="682" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_11" bpmnElement="Flow_11">
+        <di:waypoint x="1780" y="649" />
+        <di:waypoint x="1822" y="649" />
+        <di:waypoint x="1822" y="672" />
+        <di:waypoint x="1904" y="672" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_14" bpmnElement="Flow_14">
+        <di:waypoint x="1930" y="646" />
+        <di:waypoint x="1930" y="425" />
+        <di:waypoint x="2170" y="425" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1914" y="633" width="11" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_18" bpmnElement="Flow_18">
+        <di:waypoint x="2466" y="425" />
+        <di:waypoint x="2538" y="425" />
+        <di:waypoint x="2538" y="424" />
+        <di:waypoint x="2610" y="424" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2464" y="401" width="11" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_19" bpmnElement="Flow_19">
+        <di:waypoint x="2610" y="425" />
+        <di:waypoint x="2570" y="425" />
+        <di:waypoint x="2570" y="180" />
+        <di:waypoint x="2592" y="180" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_17" bpmnElement="Flow_17">
+        <di:waypoint x="2360" y="890" />
+        <di:waypoint x="2250" y="890" />
+        <di:waypoint x="2250" y="455" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_22" bpmnElement="Flow_22">
+        <di:waypoint x="3150" y="152" />
+        <di:waypoint x="3150" y="110" />
+        <di:waypoint x="2250" y="110" />
+        <di:waypoint x="2250" y="395" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_15" bpmnElement="Flow_15">
+        <di:waypoint x="2330" y="422" />
+        <di:waypoint x="2362" y="422" />
+        <di:waypoint x="2362" y="426" />
+        <di:waypoint x="2415" y="426" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_16" bpmnElement="Flow_16">
+        <di:waypoint x="2440" y="451" />
+        <di:waypoint x="2440" y="860" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2442" y="521" width="15" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_20" bpmnElement="Flow_20">
+        <di:waypoint x="2747" y="179" />
+        <di:waypoint x="2811" y="179" />
+        <di:waypoint x="2811" y="180" />
+        <di:waypoint x="2874" y="180" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_21" bpmnElement="Flow_21">
+        <di:waypoint x="2930" y="180" />
+        <di:waypoint x="3075" y="180" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2932" y="163" width="15" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_23" bpmnElement="Flow_23">
+        <di:waypoint x="2900" y="206" />
+        <di:waypoint x="2900" y="860" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="2904" y="227" width="11" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_25" bpmnElement="Flow_25">
+        <di:waypoint x="3246" y="890" />
+        <di:waypoint x="3493" y="890" />
+        <di:waypoint x="3493" y="682" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="3252" y="899" width="15" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_24" bpmnElement="Flow_24">
+        <di:waypoint x="2980" y="889" />
+        <di:waypoint x="3087" y="889" />
+        <di:waypoint x="3087" y="890" />
+        <di:waypoint x="3194" y="890" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
