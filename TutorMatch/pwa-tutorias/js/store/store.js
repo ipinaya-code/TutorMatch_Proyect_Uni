@@ -5,7 +5,7 @@ import { useSyncExternalStore } from 'react'
 import { idbGet, idbSet } from '../offline/idb.js'
 import { ALL_SLOTS, slotLabel } from '../data/content.js'
 import { buildCatalog, CAREER, isTutorable } from '../data/curriculum.js'
-import { apiLogin, apiRegistro, apiCrearSolicitud } from '../utils/api.js'
+import { apiLogin, apiRegistro } from '../utils/api.js'
 
 const KEY = 'db-v3'
 const rng = (a) => () => {
@@ -72,37 +72,72 @@ const find = (d, id) => d.reqs.find((r) => r.id === id)
 export const act = {
   async login(email, pass) {
     // 1. Intento de autenticación real contra la API en Python / PostgreSQL
-    const resApi = await apiLogin(email, pass)
-    if (resApi.exito && resApi.datos?.usuario) {
-      const u = resApi.datos.usuario
-      // Sincronizar o mantener sesión local
-      commit((d) => {
-        let existente = d.users.find((x) => x.email === u.email)
-        if (!existente) {
-          d.users.push({
-            id: String(u.id),
-            name: u.nombre,
-            email: u.email,
-            pass: pass,
-            role: u.rol,
-            career: u.carrera || CAREER,
-            semester: u.semestre || 1,
-            classes: [],
-            grades: {},
-            offer: [],
-            cupo: 4
-          })
-        }
-        d.session = existente ? existente.id : String(u.id)
-        return d
-      })
-      return null // Sin error
+    try {
+      const resApi = await apiLogin(email, pass)
+      if (resApi.exito && resApi.datos?.usuario) {
+        const u = resApi.datos.usuario
+        const idStr = String(u.id)
+        commit((d) => {
+          let existente = d.users.find((x) => x.email === u.email)
+          if (!existente) {
+            existente = {
+              id: idStr,
+              name: u.nombre,
+              email: u.email,
+              pass: pass,
+              codigo_saga: u.codigo_saga || pass,
+              role: u.rol,
+              career: u.carrera || CAREER,
+              semester: u.semestre || 8,
+              classes: [],
+              grades: {},
+              offer: [],
+              cupo: 4
+            }
+            d.users.push(existente)
+          } else {
+            existente.codigo_saga = u.codigo_saga || pass
+            existente.name = u.nombre
+            existente.role = u.rol
+          }
+          d.session = existente.id
+          return d
+        })
+        return null // Éxito
+      }
+    } catch (e) {
+      console.warn('Fallo al conectar con la API, usando respaldo local:', e)
     }
 
-    // 2. Fallback local si el backend estuviera apagado
-    const uLocal = db.users.find((x) => x.email === email.trim().toLowerCase() && x.pass === pass)
-    if (!uLocal) return 'Correo o contraseña incorrectos.'
+    // 2. Respaldo local si el backend estuviera apagado o respondiendo lento
+    const emailNorm = email.trim().toLowerCase()
+    const passNorm = pass.trim().toUpperCase()
+
+    // Cuentas precargadas oficiales
+    const oficiales = [
+      { id: 'est_iver', name: 'Iver Piñaya Vargas', email: 'ipinayav@est.emi.edu.bo', pass: 'C11368-9', codigo_saga: 'C11368-9', role: 'estudiante', semester: 8 },
+      { id: 'doc_mendoza', name: 'Ing. Roberto Mendoza', email: 'rmendoza@adm.emi.edu.bo', pass: 'DOC-8821', codigo_saga: 'DOC-8821', role: 'docente', semester: 10 },
+      { id: 'doc_soria', name: 'Ing. Patricia Soria', email: 'psoria@adm.emi.edu.bo', pass: 'DOC-9412', codigo_saga: 'DOC-9412', role: 'docente', semester: 10 }
+    ]
+
+    const oficial = oficiales.find((x) => x.email === emailNorm && x.codigo_saga.toUpperCase() === passNorm)
+    if (oficial) {
+      commit((d) => {
+        let u = d.users.find((x) => x.email === oficial.email)
+        if (!u) {
+          u = { ...oficial, career: CAREER, classes: [], grades: {}, offer: [], cupo: 4 }
+          d.users.push(u)
+        }
+        d.session = u.id
+        return d
+      })
+      return null // Éxito inmediato
+    }
+
+    const uLocal = db.users.find((x) => x.email === emailNorm && (x.pass === pass || x.codigo_saga?.toUpperCase() === passNorm))
+    if (!uLocal) return 'Correo institucional o código SAGA incorrectos.'
     commit((d) => { d.session = uLocal.id; return d })
+    return null
   },
   async register(f) {
     const email = f.email.trim().toLowerCase()

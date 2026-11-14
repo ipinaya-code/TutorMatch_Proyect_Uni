@@ -1,25 +1,57 @@
 export const NAV = [
-  { id: 'problemas', label: 'Problema' },
-  { id: 'motor', label: 'Motor genético' },
+  { id: 'problemas', label: 'El Problema' },
+  { id: 'motor', label: 'Redes Neuronales' },
   { id: 'objetivos', label: 'Objetivos' },
 ]
 
 export const PROBLEMS = [
-  { t: 'Abandono por choque de horarios', d: 'Si tutor y estudiante no coinciden, el estudiante se desmotiva y deja el programa.', c: 'text-oro' },
-  { t: 'Coordinadores con semanas de planilla', d: 'Cruzar disponibilidades a mano toma semanas y produce errores de asignación.', c: 'text-azul' },
-  { t: 'Agendas que no abren con mala señal', d: 'Los portales pesados exigen buena conexión; en el campus no siempre la hay.', c: 'text-cielo' },
+  { 
+    t: 'Dificultad para encontrar un docente apto al tema', 
+    d: 'Los estudiantes de 8vo y 9no semestre presentan temas innovadores (IA, Cloud, Seguridad) pero terminan asignados a docentes que no dominan esa área específica.', 
+    c: 'text-oro' 
+  },
+  { 
+    t: 'Riesgo de mal asesoramiento y retraso de tesis', 
+    d: 'Cuando el tema de grado no es el fuerte del docente tutor, se generan observaciones tardías, frustración académica y retrasos en la titulación.', 
+    c: 'text-azul' 
+  },
+  { 
+    t: 'Falta de designación idónea de tribunales revisores', 
+    d: 'Al aprobarse el proyecto, los revisores asignados a menudo no tienen afinidad técnica con el tema, prolongando las correcciones.', 
+    c: 'text-cielo' 
+  },
 ]
 
 export const OBJECTIVES = [
-  { v: 'Modelar', d: 'las restricciones clave: disponibilidad horaria, materias aprobadas y cupos.', a: 'Formalización matemática de variables' },
-  { v: 'Implementar', d: 'un algoritmo genético que genere parejas tutor-estudiante y cronogramas.', a: 'Motor de optimización combinatoria' },
-  { v: 'Configurar', d: 'la PWA con enfoque Offline-First para ver agendas sin conexión.', a: 'Service Workers e IndexedDB' },
-  { v: 'Construir', d: 'una API segura para gestionar los datos académicos.', a: 'Servicios, controladores y persistencia' },
-  { v: 'Evaluar', d: 'el rendimiento del algoritmo y la satisfacción de los usuarios.', a: 'Pruebas piloto y métricas de usabilidad' },
+  { 
+    v: 'Analizar', 
+    d: 'los títulos y propuestas tentativas mediante Procesamiento de Lenguaje Natural (NLP).', 
+    a: 'Extracción semántica de palabras clave y tecnologías involucradas.' 
+  },
+  { 
+    v: 'Recomendar', 
+    d: 'al docente tutor idóneo utilizando Redes Neuronales y cálculo de afinidad temática.', 
+    a: 'Cotejo vectorial con especialidades, cursos dictados y trayectoria docente.' 
+  },
+  { 
+    v: 'Gestionar', 
+    d: 'el plazo formal de 72 horas para la aceptación o declinación con documento PDF adjunto.', 
+    a: 'Buzón docente con control de expiración automática y notificación.' 
+  },
+  { 
+    v: 'Designar', 
+    d: 'automáticamente al comité de Revisores afines al tema en cuanto el tutor acepta el proyecto.', 
+    a: 'Garantía de idoneidad técnica en el tribunal de grado.' 
+  },
+  { 
+    v: 'Optimizar', 
+    d: 'la carga académica limitando a un máximo de 3 pupilos activos por tutor.', 
+    a: 'Reglamento de titulación de Ingeniería de Sistemas — EMI Cochabamba.' 
+  },
 ]
 
-export const SUBJECTS = ['Cálculo I', 'Álgebra Lineal', 'Física I', 'Programación I', 'Estadística']
+export const SUBJECTS = ['Inteligencia Artificial', 'Arquitectura de Software', 'Seguridad Informática', 'Bases de Datos', 'Desarrollo Web']
 export const DAYS = ['Lun', 'Mar', 'Mié', 'Jue', 'Vie']
-export const HOURS = ['8:00', '10:00', '14:00', '16:00']
+export const HOURS = ['7:30', '9:45', '14:00', '16:15']
 export const slotLabel = (s) => `${DAYS[Math.floor(s / 4)]} ${HOURS[s % 4]}`
 export const ALL_SLOTS = Array.from({ length: 20 }, (_, i) => i)

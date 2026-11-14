@@ -1,22 +1,38 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, List
+import shutil
+import os
 
 from conexion import probar_conexion
-from servicios.usuarios import verificar_credenciales, registrar_usuario, listar_usuarios
-from servicios.materias import listar_materias, crear_materia
-from servicios.tutorias import listar_solicitudes, crear_solicitud, asignar_tutor_a_solicitud, cambiar_estado_solicitud
-from servicios.algoritmo_genetico import ejecutar_algoritmo_genetico, aplicar_plan_en_base_de_datos
-
-# Inicialización de FastAPI
-app = FastAPI(
-    title="TutorMatch API",
-    description="API REST en Python para la gestión de tutorías universitarias",
-    version="1.0.0"
+from servicios.usuarios import (
+    verificar_credenciales_saga, 
+    registrar_usuario, 
+    listar_docentes_con_perfil,
+    actualizar_especialidades_docente
+)
+from servicios.recomendador_neuronal import (
+    extraer_palabras_clave, 
+    recomendar_tutores_por_tema, 
+    recomendar_revisores_por_tema
+)
+from servicios.proyectos import (
+    crear_propuesta_proyecto,
+    listar_proyectos_de_estudiante,
+    buzon_proyectos_docente,
+    responder_propuesta_docente,
+    obtener_revisores_de_proyecto
 )
 
-# CORS para comunicación con el frontend
+# Inicialización de la API
+app = FastAPI(
+    title="TutorMatch API — EMI Cochabamba",
+    description="Sistema Recomendador con Redes Neuronales de Tutores y Revisores para Proyectos de Grado",
+    version="2.0.0"
+)
+
+# Configuración de CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -25,36 +41,34 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Carpeta para almacenar los PDFs de las propuestas
+UPLOADS_DIR = "uploads_propuestas"
+os.makedirs(UPLOADS_DIR, exist_ok=True)
+
 # ----------------------------------------------------------------
-# MODELOS DE ENTRADA (Validación simple de datos)
+# MODELOS DE ENTRADA (Pydantic)
 # ----------------------------------------------------------------
-class LoginRequest(BaseModel):
-    email: str
-    password: str
+class LoginSagaRequest(BaseModel):
+    email: str          # ej: ipinayav@est.emi.edu.bo
+    codigo_saga: str    # ej: C11368-9
 
 class RegistroUsuarioRequest(BaseModel):
     nombre: str
     email: str
-    password: str
-    rol: str
-    semestre: Optional[int] = 1
+    codigo_saga: str
+    rol: str            # 'estudiante' o 'docente'
+    semestre: Optional[int] = 8
 
-class MateriaRequest(BaseModel):
-    codigo: str
-    nombre: str
-    semestre: int
-    es_tutorable: Optional[bool] = True
+class RecomendarTutoresRequest(BaseModel):
+    titulo_proyecto: str
 
-class SolicitudRequest(BaseModel):
-    estudiante_id: int
-    materia_id: int
-    observaciones: Optional[str] = ""
+class PerfilDocenteRequest(BaseModel):
+    cursos_dictados: str
+    especialidades: str
 
-class AsignarTutorRequest(BaseModel):
-    tutor_id: int
-
-class EstadoRequest(BaseModel):
-    estado: str
+class ResponderPropuestaRequest(BaseModel):
+    accion: str         # 'aceptar' o 'rechazar'
+    observacion: Optional[str] = ""
 
 # ----------------------------------------------------------------
 # ENDPOINTS GENERALES
@@ -62,121 +76,143 @@ class EstadoRequest(BaseModel):
 @app.get("/")
 def ruta_principal():
     return {
-        "mensaje": "¡Bienvenido a la API de TutorMatch!",
-        "documentacion": "/docs"
+        "sistema": "TutorMatch — EMI Cochabamba (Ingeniería de Sistemas)",
+        "descripcion": "Recomendación de Tutores y Revisores de Proyectos de Grado con Redes Neuronales",
+        "docs": "/docs"
     }
 
 @app.get("/api/v1/health")
-def verificar_salud():
+def salud():
     exito, mensaje = probar_conexion()
     return {"api": "OK", "base_de_datos": mensaje, "conectado": exito}
 
 # ----------------------------------------------------------------
-# ENDPOINTS DE USUARIOS Y AUTENTICACIÓN
+# ENDPOINTS DE AUTENTICACIÓN INSTITUCIONAL
 # ----------------------------------------------------------------
 @app.post("/api/v1/auth/login")
-def login(datos: LoginRequest):
-    usuario = verificar_credenciales(datos.email, datos.password)
+def login(datos: LoginSagaRequest):
+    """
+    Login con correo institucional y código SAGA.
+    """
+    usuario = verificar_credenciales_saga(datos.email, datos.codigo_saga)
     if not usuario:
-        raise HTTPException(status_code=401, detail="Correo o contraseña incorrectos")
-    return {"mensaje": "Inicio de sesión correcto", "usuario": usuario}
+        raise HTTPException(
+            status_code=401, 
+            detail="Credenciales inválidas. Revisa tu correo institucional o tu código SAGA."
+        )
+    return {"mensaje": "Acceso concedido", "usuario": usuario}
 
 @app.post("/api/v1/auth/registro")
 def registro(datos: RegistroUsuarioRequest):
     try:
-        nuevo_usuario = registrar_usuario(
+        nuevo = registrar_usuario(
             nombre=datos.nombre,
             email=datos.email,
-            password=datos.password,
+            codigo_saga=datos.codigo_saga,
             rol=datos.rol,
-            semestre=datos.semestre
+            semestre=datos.semestre or 8
         )
-        return {"mensaje": "Usuario registrado exitosamente", "usuario": nuevo_usuario}
-    except Exception as error:
-        raise HTTPException(status_code=400, detail=f"Error al registrar: {str(error)}")
-
-@app.get("/api/v1/usuarios")
-def obtener_usuarios():
-    return listar_usuarios()
+        return {"mensaje": "Usuario registrado exitosamente", "usuario": nuevo}
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Error en registro: {str(e)}")
 
 # ----------------------------------------------------------------
-# ENDPOINTS DE MATERIAS
+# ENDPOINTS DE DOCENTES Y PERFIL
 # ----------------------------------------------------------------
-@app.get("/api/v1/materias")
-def obtener_materias():
-    return listar_materias()
+@app.get("/api/v1/docentes")
+def obtener_docentes():
+    return listar_docentes_con_perfil()
 
-@app.post("/api/v1/materias")
-def nueva_materia(datos: MateriaRequest):
-    try:
-        materia = crear_materia(
-            codigo=datos.codigo,
-            nombre=datos.nombre,
-            semestre=datos.semestre,
-            es_tutorable=datos.es_tutorable
-        )
-        return {"mensaje": "Materia registrada", "materia": materia}
-    except Exception as error:
-        raise HTTPException(status_code=400, detail=f"Error al crear materia: {str(error)}")
+@app.put("/api/v1/docentes/{docente_id}/perfil")
+def actualizar_perfil(docente_id: int, datos: PerfilDocenteRequest):
+    actualizado = actualizar_especialidades_docente(
+        docente_id=docente_id,
+        cursos=datos.cursos_dictados,
+        especialidades=datos.especialidades
+    )
+    return {"mensaje": "Perfil docente actualizado", "perfil": actualizado}
 
 # ----------------------------------------------------------------
-# ENDPOINTS DE TUTORÍAS / SOLICITUDES
+# ENDPOINTS DEL MOTOR DE REDES NEURONALES / NLP
 # ----------------------------------------------------------------
-@app.get("/api/v1/solicitudes")
-def obtener_solicitudes():
-    return listar_solicitudes()
-
-@app.post("/api/v1/solicitudes")
-def nueva_solicitud(datos: SolicitudRequest):
-    try:
-        solicitud = crear_solicitud(
-            estudiante_id=datos.estudiante_id,
-            materia_id=datos.materia_id,
-            observaciones=datos.observaciones
-        )
-        return {"mensaje": "Solicitud creada exitosamente", "solicitud": solicitud}
-    except Exception as error:
-        raise HTTPException(status_code=400, detail=f"Error al solicitar tutoría: {str(error)}")
-
-@app.put("/api/v1/solicitudes/{solicitud_id}/asignar")
-def asignar_tutor(solicitud_id: int, datos: AsignarTutorRequest):
-    actualizado = asignar_tutor_a_solicitud(solicitud_id, datos.tutor_id)
-    if not actualizado:
-        raise HTTPException(status_code=404, detail="Solicitud no encontrada")
-    return {"mensaje": "Tutor asignado con éxito", "solicitud": actualizado}
-
-@app.put("/api/v1/solicitudes/{solicitud_id}/estado")
-def actualizar_estado(solicitud_id: int, datos: EstadoRequest):
-    actualizado = cambiar_estado_solicitud(solicitud_id, datos.estado)
-    if not actualizado:
-        raise HTTPException(status_code=404, detail="Solicitud no encontrada")
-    return {"mensaje": "Estado actualizado", "solicitud": actualizado}
-
-# ----------------------------------------------------------------
-# ENDPOINTS DEL ALGORITMO GENÉTICO (OPTIMIZACIÓN)
-# ----------------------------------------------------------------
-@app.post("/api/v1/optimizer/simular")
-def simular_asignacion_genetica():
+@app.post("/api/v1/ia/analizar-tema")
+def analizar_tema(datos: RecomendarTutoresRequest):
     """
-    Ejecuta el algoritmo genético para calcular la asignación óptima
-    sin modificar la base de datos (ideal para ver la simulación en el frontend).
+    Extrae palabras clave y recomienda tutores ordenados por afinidad.
     """
-    resultado = ejecutar_algoritmo_genetico()
+    resultado = recomendar_tutores_por_tema(datos.titulo_proyecto)
     return resultado
 
-@app.post("/api/v1/optimizer/aplicar")
-def aplicar_asignacion_genetica():
+@app.get("/api/v1/ia/recomendar-revisores")
+def obtener_revisores_recomendados(titulo: str, tutor_id: int):
     """
-    Ejecuta el algoritmo genético y guarda automáticamente las asignaciones
-    en la tabla 'solicitudes_tutoria' de PostgreSQL.
+    Recomienda revisores afines al tema excluyendo al docente tutor.
     """
-    resultado = ejecutar_algoritmo_genetico()
-    if not resultado.get("asignaciones"):
-        return {"mensaje": "No se realizaron asignaciones", "detalle": resultado}
-    
-    total_aplicados = aplicar_plan_en_base_de_datos(resultado["asignaciones"])
+    return recomendar_revisores_por_tema(titulo, tutor_id)
+
+# ----------------------------------------------------------------
+# ENDPOINTS DE PROPUESTAS DE PROYECTO (ESTUDIANTES Y BUZÓN DOCENTE)
+# ----------------------------------------------------------------
+@app.post("/api/v1/proyectos/enviar")
+async def enviar_propuesta_proyecto(
+    estudiante_id: int = Form(...),
+    docente_tutor_id: int = Form(...),
+    titulo_tentativo: str = Form(...),
+    archivo_pdf: Optional[UploadFile] = File(None)
+):
+    """
+    El estudiante selecciona al docente recomendado y sube su PDF.
+    Se activa el plazo de 72 horas para respuesta del tutor.
+    """
+    pdf_url = ""
+    if archivo_pdf:
+        nombre_guardado = f"propuesta_est_{estudiante_id}_{archivo_pdf.filename}"
+        ruta_completa = os.path.join(UPLOADS_DIR, nombre_guardado)
+        with open(ruta_completa, "wb") as buffer:
+            shutil.copyfileobj(archivo_pdf.file, buffer)
+        pdf_url = f"/uploads/{nombre_guardado}"
+
+    proyecto = crear_propuesta_proyecto(
+        estudiante_id=estudiante_id,
+        titulo_tentativo=titulo_tentativo,
+        docente_tutor_id=docente_tutor_id,
+        pdf_url=pdf_url
+    )
     return {
-        "mensaje": f"Se aplicaron {total_aplicados} asignaciones en la base de datos con éxito.",
-        "resultado_algoritmo": resultado["resumen"],
-        "asignaciones": resultado["asignaciones"]
+        "mensaje": "Propuesta enviada al docente tutor con éxito. Plazo de respuesta: 72 horas.",
+        "proyecto": proyecto
     }
+
+@app.get("/api/v1/proyectos/estudiante/{estudiante_id}")
+def obtener_proyectos_estudiante(estudiante_id: int):
+    return listar_proyectos_de_estudiante(estudiante_id)
+
+@app.get("/api/v1/docentes/{docente_id}/buzon")
+def obtener_buzon_docente(docente_id: int):
+    """
+    Buzón donde el docente revisa los proyectos tentativos con sus PDFs.
+    """
+    return buzon_proyectos_docente(docente_id)
+
+@app.post("/api/v1/docentes/{docente_id}/proyectos/{proyecto_id}/responder")
+def responder_propuesta(docente_id: int, proyecto_id: int, datos: ResponderPropuestaRequest):
+    """
+    El docente Acepta o Rechaza la propuesta.
+    Si Acepta, la IA asigna automáticamente a los Revisores del tema.
+    """
+    resultado = responder_propuesta_docente(
+        proyecto_id=proyecto_id,
+        docente_id=docente_id,
+        accion=datos.accion,
+        observacion=datos.observacion
+    )
+    if not resultado:
+        raise HTTPException(status_code=404, detail="Proyecto o docente no encontrado.")
+    return {
+        "mensaje": f"Propuesta {datos.accion}da correctamente.",
+        "resultado": resultado
+    }
+
+@app.get("/api/v1/proyectos/{proyecto_id}/revisores")
+def consultar_revisores_proyecto(proyecto_id: int):
+    return obtener_revisores_de_proyecto(proyecto_id)

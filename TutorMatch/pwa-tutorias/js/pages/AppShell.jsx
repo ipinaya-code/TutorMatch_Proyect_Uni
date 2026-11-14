@@ -12,7 +12,13 @@ export default function AppShell({ me, db }) {
     window.addEventListener('online', u); window.addEventListener('offline', d)
     return () => { window.removeEventListener('online', u); window.removeEventListener('offline', d) }
   }, [])
-  const Panel = { estudiante: StudentPanel, tutor: TutorPanel, coordinador: CoordinatorPanel }[me.role]
+  const Panel = { 
+    estudiante: StudentPanel, 
+    docente: TutorPanel, 
+    tutor: TutorPanel, 
+    revisor: TutorPanel, 
+    coordinador: CoordinatorPanel 
+  }[me.role] || StudentPanel
   return (
     <>
       <header className="sticky top-0 z-50 bg-white text-ink shadow-lg shadow-black/25">

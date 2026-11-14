@@ -1,93 +1,94 @@
 // ==============================================================
-// CLIENTE API REST: Conexión con el Backend en Python (FastAPI)
+// CLIENTE API REST: TutorMatch — EMI Cochabamba
 // ==============================================================
 export const API_BASE_URL = 'http://localhost:8000/api/v1'
 
-/**
- * Función genérica y básica para hacer peticiones fetch a la API.
- */
-async function peticionApi(endpoint, metodo = 'GET', cuerpo = null) {
+async function peticion(endpoint, metodo = 'GET', cuerpo = null, esFormData = false) {
+  const controller = new AbortController()
+  const timeoutId = setTimeout(() => controller.abort(), 1500) // 1.5 segundos máximo
+
   try {
-    const opciones = {
-      method: metodo,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }
-
+    const opciones = { method: metodo, signal: controller.signal }
+    
     if (cuerpo) {
-      opciones.body = JSON.stringify(cuerpo)
+      if (esFormData) {
+        opciones.body = cuerpo // Fetch asigna el multipart header automáticamente
+      } else {
+        opciones.headers = { 'Content-Type': 'application/json' }
+        opciones.body = JSON.stringify(cuerpo)
+      }
     }
 
-    const respuesta = await fetch(`${API_BASE_URL}${endpoint}`, opciones)
-    const datos = await respuesta.json()
-
-    if (!respuesta.ok) {
-      throw new Error(datos.detail || 'Error en la petición a la API')
-    }
-
+    const res = await fetch(`${API_BASE_URL}${endpoint}`, opciones)
+    clearTimeout(timeoutId)
+    const datos = await res.json()
+    if (!res.ok) throw new Error(datos.detail || 'Error en la petición')
     return { exito: true, datos }
-  } catch (error) {
-    console.warn(`[API] Falló ${metodo} a ${endpoint}:`, error.message)
-    return { exito: false, error: error.message }
+  } catch (err) {
+    clearTimeout(timeoutId)
+    console.warn(`[API] Falló o tardó ${metodo} a ${endpoint}:`, err.message)
+    return { exito: false, error: err.message }
   }
 }
 
 // --------------------------------------------------------------
-// FUNCIONES DE USUARIOS Y AUTENTICACIÓN
+// AUTENTICACIÓN INSTITUCIONAL (Correo EMI + Código SAGA)
 // --------------------------------------------------------------
-export async function apiLogin(email, password) {
-  return await peticionApi('/auth/login', 'POST', { email, password })
-}
-
-export async function apiRegistro(datosUsuario) {
-  return await peticionApi('/auth/registro', 'POST', datosUsuario)
-}
-
-export async function apiListarUsuarios() {
-  return await peticionApi('/usuarios', 'GET')
-}
-
-// --------------------------------------------------------------
-// FUNCIONES DE MATERIAS
-// --------------------------------------------------------------
-export async function apiListarMaterias() {
-  return await peticionApi('/materias', 'GET')
-}
-
-export async function apiCrearMateria(datosMateria) {
-  return await peticionApi('/materias', 'POST', datosMateria)
-}
-
-// --------------------------------------------------------------
-// FUNCIONES DE TUTORÍAS / SOLICITUDES
-// --------------------------------------------------------------
-export async function apiListarSolicitudes() {
-  return await peticionApi('/solicitudes', 'GET')
-}
-
-export async function apiCrearSolicitud(estudianteId, materiaId, observaciones = '') {
-  return await peticionApi('/solicitudes', 'POST', {
-    estudiante_id: estudianteId,
-    materia_id: materiaId,
-    observaciones: observaciones,
+export async function apiLogin(email, codigoSaga) {
+  return await peticion('/auth/login', 'POST', {
+    email: email.trim().toLowerCase(),
+    codigo_saga: codigoSaga.trim().toUpperCase()
   })
 }
 
-export async function apiAsignarTutor(solicitudId, tutorId) {
-  return await peticionApi(`/solicitudes/${solicitudId}/asignar`, 'PUT', {
-    tutor_id: tutorId,
+export async function apiRegistro(datos) {
+  return await peticion('/auth/registro', 'POST', datos)
+}
+
+// --------------------------------------------------------------
+// REDES NEURONALES / NLP: RECOMENDACIÓN POR TEMA
+// --------------------------------------------------------------
+export async function apiAnalizarTema(tituloProyecto) {
+  return await peticion('/ia/analizar-tema', 'POST', {
+    titulo_proyecto: tituloProyecto
   })
 }
 
-// --------------------------------------------------------------
-// FUNCIONES DEL ALGORITMO GENÉTICO (BACKEND)
-// --------------------------------------------------------------
-export async function apiSimularOptimizacion() {
-  return await peticionApi('/optimizer/simular', 'POST')
+export async function apiRecomendarRevisores(tituloProyecto, tutorId) {
+  return await peticion(`/ia/recomendar-revisores?titulo=${encodeURIComponent(tituloProyecto)}&tutor_id=${tutorId}`)
 }
 
-export async function apiAplicarOptimizacion() {
-  return await peticionApi('/optimizer/aplicar', 'POST')
+// --------------------------------------------------------------
+// PROPUESTAS DE PROYECTO (Envío con PDF y plazo 72h)
+// --------------------------------------------------------------
+export async function apiEnviarPropuesta({ estudianteId, docenteTutorId, tituloTentativo, archivoPdf }) {
+  const formData = new FormData()
+  formData.append('estudiante_id', estudianteId)
+  formData.append('docente_tutor_id', docenteTutorId)
+  formData.append('titulo_tentativo', tituloTentativo)
+  if (archivoPdf) formData.append('archivo_pdf', archivoPdf)
+
+  return await peticion('/proyectos/enviar', 'POST', formData, true)
 }
 
+export async function apiListarProyectosEstudiante(estudianteId) {
+  return await peticion(`/proyectos/estudiante/${estudianteId}`)
+}
+
+// --------------------------------------------------------------
+// BUZÓN DOCENTE (Aceptar / Rechazar propuesta)
+// --------------------------------------------------------------
+export async function apiObtenerBuzonDocente(docenteId) {
+  return await peticion(`/docentes/${docenteId}/buzon`)
+}
+
+export async function apiResponderPropuestaDocente(docenteId, proyectoId, accion, observacion = '') {
+  return await peticion(`/docentes/${docenteId}/proyectos/${proyectoId}/responder`, 'POST', {
+    accion,
+    observacion
+  })
+}
+
+export async function apiObtenerRevisoresProyecto(proyectoId) {
+  return await peticion(`/proyectos/${proyectoId}/revisores`)
+}

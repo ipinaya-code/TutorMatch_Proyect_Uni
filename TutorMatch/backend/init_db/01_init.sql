@@ -1,84 +1,97 @@
 -- ==============================================================
--- BASE DE DATOS TUTORMATCH (PostgreSQL)
--- Tablas principales según Modelo Entidad-Relación y Requisitos
+-- BASE DE DATOS TUTORMATCH — EMI COCHABAMBA
+-- Sistema Recomendador con Redes Neuronales para Proyectos de Grado
+-- Población: Ingeniería de Sistemas (8vo y 9no semestre)
+-- Roles: Estudiantes, Docentes (Tutores), Revisores
 -- ==============================================================
 
--- 1. Tabla de Usuarios (Estudiantes, Tutores, Coordinadores)
+-- 1. Tabla de Usuarios
 CREATE TABLE IF NOT EXISTS usuarios (
     id SERIAL PRIMARY KEY,
-    nombre VARCHAR(120) NOT NULL,
-    email VARCHAR(120) UNIQUE NOT NULL,
+    nombre VARCHAR(150) NOT NULL,
+    email VARCHAR(120) UNIQUE NOT NULL,      -- Ejm: ipinayav@est.emi.edu.bo o docente@adm.emi.edu.bo
+    codigo_saga VARCHAR(50) NOT NULL,        -- Ejm: C11368-9 (usado como contraseña o credencial oficial)
     password_hash VARCHAR(255) NOT NULL,
-    rol VARCHAR(30) NOT NULL CHECK (rol IN ('estudiante', 'tutor', 'coordinador')),
+    rol VARCHAR(30) NOT NULL CHECK (rol IN ('estudiante', 'docente', 'revisor')),
     carrera VARCHAR(100) DEFAULT 'Ingeniería de Sistemas',
-    semestre INT DEFAULT 1,
+    semestre INT DEFAULT 8,                  -- Estudiantes de 8vo o 9no
     creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- 2. Tabla de Materias
-CREATE TABLE IF NOT EXISTS materias (
+-- 2. Perfil y Especialidades del Docente / Revisor
+-- Registra cursos que dicta, áreas de experiencia y temas donde destaca
+CREATE TABLE IF NOT EXISTS docente_perfiles (
     id SERIAL PRIMARY KEY,
-    codigo VARCHAR(30) UNIQUE NOT NULL,
-    nombre VARCHAR(150) NOT NULL,
-    semestre INT NOT NULL,
-    es_tutorable BOOLEAN DEFAULT TRUE
+    docente_id INT UNIQUE NOT NULL REFERENCES usuarios(id) ON DELETE CASCADE,
+    cursos_dictados TEXT,                    -- Cursos/materias asignadas (ej: Inteligencia Artificial, Ing. de Software)
+    especialidades TEXT NOT NULL,            -- Palabras clave/áreas: "IA, Automatización, Redes, Cloud, Machine Learning"
+    experiencia_anios INT DEFAULT 5,
+    biografia TEXT,
+    activo_como_tutor BOOLEAN DEFAULT TRUE,
+    activo_como_revisor BOOLEAN DEFAULT TRUE
 );
 
--- 3. Disponibilidad horaria de tutores
-CREATE TABLE IF NOT EXISTS disponibilidades (
-    id SERIAL PRIMARY KEY,
-    tutor_id INT NOT NULL REFERENCES usuarios(id) ON DELETE CASCADE,
-    dia_semana VARCHAR(20) NOT NULL, -- Lunes, Martes, Miércoles, etc.
-    hora_inicio TIME NOT NULL,
-    hora_fin TIME NOT NULL
-);
-
--- 4. Materias que imparte cada tutor
-CREATE TABLE IF NOT EXISTS tutor_materias (
-    id SERIAL PRIMARY KEY,
-    tutor_id INT NOT NULL REFERENCES usuarios(id) ON DELETE CASCADE,
-    materia_id INT NOT NULL REFERENCES materias(id) ON DELETE CASCADE,
-    calificacion_obtenida INT DEFAULT 70,
-    CONSTRAINT uq_tutor_materia UNIQUE (tutor_id, materia_id)
-);
-
--- 5. Solicitudes de Tutoría
-CREATE TABLE IF NOT EXISTS solicitudes_tutoria (
+-- 3. Proyectos de Grado (Propuestas / Tesis)
+CREATE TABLE IF NOT EXISTS proyectos_grado (
     id SERIAL PRIMARY KEY,
     estudiante_id INT NOT NULL REFERENCES usuarios(id) ON DELETE CASCADE,
-    materia_id INT NOT NULL REFERENCES materias(id) ON DELETE CASCADE,
-    tutor_id INT REFERENCES usuarios(id) ON DELETE SET NULL, -- Se asigna manual o por algoritmo
-    estado VARCHAR(30) DEFAULT 'pendiente' CHECK (estado IN ('pendiente', 'asignada', 'completada', 'cancelada')),
-    fecha_solicitud TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    observaciones TEXT
+    titulo_tentativo TEXT NOT NULL,          -- Ejm: "Sistema de Automatización con IA para Restaurante Armando Arquitectura MVC"
+    palabras_clave TEXT,                     -- Palabras clave extraídas por NLP/Red Neuronal: "IA, arquitectura, automatización"
+    pdf_documento_url VARCHAR(255),          -- Archivo PDF con la propuesta formal enviada por el estudiante
+    docente_tutor_id INT REFERENCES usuarios(id) ON DELETE SET NULL,
+    estado VARCHAR(30) DEFAULT 'borrador' CHECK (estado IN ('borrador', 'enviado_a_tutor', 'aceptado', 'rechazado', 'expirado_72h')),
+    fecha_envio TIMESTAMP,                   -- Momento en que se envía el PDF al tutor
+    fecha_limite_72h TIMESTAMP,              -- fecha_envio + 72 horas de plazo
+    fecha_respuesta TIMESTAMP,
+    observacion_tutor TEXT,
+    creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- 6. Evaluaciones / Retroalimentación de la tutoría
-CREATE TABLE IF NOT EXISTS evaluaciones (
+-- 4. Revisores Recomendados y Designados para el Proyecto
+-- Se recomiendan y asignan automáticamente cuando el docente tutor acepta el proyecto
+CREATE TABLE IF NOT EXISTS proyecto_revisores (
     id SERIAL PRIMARY KEY,
-    solicitud_id INT UNIQUE NOT NULL REFERENCES solicitudes_tutoria(id) ON DELETE CASCADE,
-    calificacion INT CHECK (calificacion BETWEEN 1 AND 5),
-    comentario TEXT,
-    fecha_evaluacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    proyecto_id INT NOT NULL REFERENCES proyectos_grado(id) ON DELETE CASCADE,
+    revisor_id INT NOT NULL REFERENCES usuarios(id) ON DELETE CASCADE,
+    afinidad_score NUMERIC(5, 2) DEFAULT 0.0, -- Score de compatibilidad neuronal con el tema
+    estado VARCHAR(30) DEFAULT 'recomendado' CHECK (estado IN ('recomendado', 'asignado', 'confirmado')),
+    asignado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT uq_proyecto_revisor UNIQUE (proyecto_id, revisor_id)
+);
+
+-- 5. Buzón de Notificaciones por Correo / Sistema
+CREATE TABLE IF NOT EXISTS notificaciones (
+    id SERIAL PRIMARY KEY,
+    usuario_id INT NOT NULL REFERENCES usuarios(id) ON DELETE CASCADE,
+    proyecto_id INT REFERENCES proyectos_grado(id) ON DELETE CASCADE,
+    asunto VARCHAR(200) NOT NULL,
+    mensaje TEXT NOT NULL,
+    enviado_a_email VARCHAR(120),
+    leido BOOLEAN DEFAULT FALSE,
+    creado_en TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 -- ==============================================================
--- DATOS INICIALES DE PRUEBA (SEED)
--- Credenciales de prueba: 1234
+-- DATOS INICIALES (DOCENTES Y ESTUDIANTES EMI)
+-- Credenciales según especificación: Correo institucional + Código SAGA
 -- ==============================================================
 
-INSERT INTO usuarios (nombre, email, password_hash, rol, semestre)
-VALUES 
-    ('Coordinador General', 'coord@emi.demo', '1234', 'coordinador', 1),
-    ('Ana Rojas', 'ana@emi.demo', '1234', 'tutor', 7),
-    ('Camila Vargas', 'camila@emi.demo', '1234', 'estudiante', 2)
+INSERT INTO usuarios (nombre, email, codigo_saga, password_hash, rol, semestre)
+VALUES
+    -- Docentes / Tutores
+    ('Ing. Roberto Mendoza', 'rmendoza@adm.emi.edu.bo', 'DOC-8821', 'DOC-8821', 'docente', 10),
+    ('Ing. Patricia Soria', 'psoria@adm.emi.edu.bo', 'DOC-9412', 'DOC-9412', 'docente', 10),
+    ('Ing. Carlos Fernández', 'cfernandez@adm.emi.edu.bo', 'DOC-7319', 'DOC-7319', 'docente', 10),
+    ('Ing. Andrea Arce', 'aarce@adm.emi.edu.bo', 'DOC-6204', 'DOC-6204', 'docente', 10),
+    -- Estudiante de 8vo/9no semestre (ejemplo oficial del PDF)
+    ('Iver Piñaya Vargas', 'ipinayav@est.emi.edu.bo', 'C11368-9', 'C11368-9', 'estudiante', 8)
 ON CONFLICT (email) DO NOTHING;
 
-INSERT INTO materias (codigo, nombre, semestre, es_tutorable)
-VALUES 
-    ('SIS-101', 'Programación Básica I', 1, TRUE),
-    ('SIS-102', 'Cálculo I', 1, TRUE),
-    ('SIS-201', 'Estructuras de Datos', 2, TRUE),
-    ('SIS-301', 'Bases de Datos I', 3, TRUE)
-ON CONFLICT (codigo) DO NOTHING;
-
+-- Perfiles y Especialidades de los Docentes
+INSERT INTO docente_perfiles (docente_id, cursos_dictados, especialidades, experiencia_anios)
+VALUES
+    (1, 'Inteligencia Artificial, Sistemas Expertos, Robótica', 'IA, Inteligencia Artificial, Machine Learning, Redes Neuronales, Automatización, Python', 12),
+    (2, 'Ingeniería de Software, Arquitectura de Software, Metodologías Ágiles', 'Arquitectura de Software, MVC, Microservicios, Cloud Computing, DevOps, Patrones de Diseño', 9),
+    (3, 'Bases de Datos, Seguridad Informática, Auditoría de Sistemas', 'Bases de Datos, SQL, Ciberseguridad, Blockchain, Redes, Gestión de Información', 15),
+    (4, 'Desarrollo Web, Dispositivos Móviles, Interacción Humano-Computador', 'Desarrollo Web, PWA, Frontend, Mobile Apps, UX/UI, Full Stack', 8)
+ON CONFLICT (docente_id) DO NOTHING;
