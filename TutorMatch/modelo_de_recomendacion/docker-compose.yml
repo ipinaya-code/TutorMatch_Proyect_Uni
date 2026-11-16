@@ -1,0 +1,27 @@
+# ─────────────────────────────────────────────────────────────
+# docker-compose.yml — Orquestación del Sistema de Recomendación
+# de Tutores con volúmenes persistentes.
+#
+# Uso:
+#   docker compose up --build        (entrenar + API)
+#   docker compose up                (solo API si ya hay modelo)
+# ─────────────────────────────────────────────────────────────
+
+services:
+  recomendador:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: recomendador-tutores
+    ports:
+      - "8000:8000"
+    volumes:
+      # Persistir CSV y estado de docentes
+      - ./datos:/app/datos
+      # Persistir modelo entrenado y artefactos
+      - ./artefactos:/app/artefactos
+    environment:
+      - PYTHONHASHSEED=42
+      - CUBLAS_WORKSPACE_CONFIG=:4096:8
+    restart: unless-stopped
+

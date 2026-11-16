@@ -2,50 +2,76 @@ import { useState, useEffect } from 'react'
 import {
   apiObtenerBuzonDocente,
   apiResponderPropuestaDocente,
-  apiObtenerRevisoresProyecto
+  apiObtenerRevisoresProyecto,
+  apiActualizarPerfilDocente,
+  apiObtenerDocentes,
+  API_ORIGIN
 } from '../../utils/api.js'
+import { obtenerDatosDocente } from '../../store/docentes_data.js'
 
 export default function TutorPanel({ me, db }) {
   // Pestañas solicitadas: AVISOS (Buzón), PERFIL (CV/Materias/Certificados), HORARIOS
   const [tab, setTab] = useState('avisos')
   
-  // Proyectos / Solicitudes recibidas en el buzón
+  // Proyectos / Solicitudes recibidas en el buzón (Inicialmente vacío: están esperando propuestas)
   const [buzon, setBuzon] = useState([])
   const [loadingBuzon, setLoadingBuzon] = useState(false)
   const [revisoresMap, setRevisoresMap] = useState({})
   const [mensajeAccion, setMensajeAccion] = useState('')
 
-  // Estado del CV / Perfil del docente
+  // Cargar datos individualizados del docente según su correo / identidad
+  const datosIniciales = obtenerDatosDocente(me?.email)
+
+  // Estado del CV / Perfil del docente (propio e individualizado)
   const [perfil, setPerfil] = useState({
-    experienciaLaboral: '12 años como docente investigador en Inteligencia Artificial y Machine Learning. Asesor de más de 30 tesis de grado en el área de software y automatización.',
-    materiasDestacadas: ['Inteligencia Artificial', 'Sistemas Expertos', 'Machine Learning', 'Robótica Industrial', 'Visión por Computadora'],
+    experienciaLaboral: datosIniciales.experienciaLaboral,
+    materiasDestacadas: [...datosIniciales.materiasDestacadas],
     nuevaMateria: '',
-    certificados: [
-      { id: 1, titulo: 'Especialista en Deep Learning y Redes Neuronales (Stanford Online)', anio: '2023' },
-      { id: 2, titulo: 'Certificación Internacional en Cloud Computing & MLOps (AWS)', anio: '2022' },
-      { id: 3, titulo: 'Diplomado en Educación Superior Basada en Competencias (EMI)', anio: '2020' }
-    ],
+    certificados: [...datosIniciales.certificados],
     nuevoCertificado: '',
     nuevoCertAnio: '2024'
   })
 
-  // Horarios de docencia
-  const [horarios] = useState([
-    { dia: 'Lunes', hora: '07:30 - 09:45', aula: 'Laboratorio de IA 2', materia: 'Inteligencia Artificial', curso: '8vo Semestre A' },
-    { dia: 'Lunes', hora: '10:00 - 12:15', aula: 'Aula Magna 4', materia: 'Sistemas Expertos', curso: '9no Semestre B' },
-    { dia: 'Miércoles', hora: '07:30 - 09:45', aula: 'Laboratorio de IA 2', materia: 'Inteligencia Artificial', curso: '8vo Semestre A' },
-    { dia: 'Jueves', hora: '14:00 - 16:15', aula: 'Lab Redes & Cloud', materia: 'Robótica Industrial', curso: '7mo Semestre' },
-    { dia: 'Viernes', hora: '08:15 - 10:30', aula: 'Sala de Grado', materia: 'Taller de Grado I', curso: '8vo Semestre' }
-  ])
+  // Horarios de docencia propios del docente
+  const [horarios, setHorarios] = useState([...datosIniciales.horarios])
 
-  // Cargar buzón al entrar
+  // Actualizar perfil y horarios cuando cambie el usuario docente activo
+  useEffect(() => {
+    let activo = true
+    const cargarPerfil = async () => {
+      const info = obtenerDatosDocente(me?.email)
+      const respuesta = await apiObtenerDocentes()
+      const docenteBD = respuesta.exito && Array.isArray(respuesta.datos)
+        ? respuesta.datos.find((docente) =>
+            docente.email?.trim().toLowerCase() === me?.email?.trim().toLowerCase()
+          )
+        : null
+      const materiasBD = docenteBD?.especialidades
+        ?.split(',')
+        .map((especialidad) => especialidad.trim())
+        .filter(Boolean)
+      if (!activo) return
+      setPerfil({
+        experienciaLaboral: info.experienciaLaboral,
+        materiasDestacadas: materiasBD?.length ? materiasBD : [...info.materiasDestacadas],
+        nuevaMateria: '',
+        certificados: [...info.certificados],
+        nuevoCertificado: '',
+        nuevoCertAnio: '2024'
+      })
+      setHorarios([...info.horarios])
+    }
+    cargarPerfil()
+    return () => { activo = false }
+  }, [me?.email])
+
+  // Cargar buzón al entrar (inicialmente limpio si no hay propuestas enviadas)
   useEffect(() => {
     cargarBuzon()
   }, [me])
 
   const cargarBuzon = async () => {
-    // Si viene de ID real de backend o local
-    const docenteId = me?.id || 1
+    const docenteId = me?.backendId || me?.id || 1
     setLoadingBuzon(true)
     try {
       const res = await apiObtenerBuzonDocente(docenteId)
@@ -61,23 +87,8 @@ export default function TutorPanel({ me, db }) {
           }
         })
       } else {
-        // Mock de datos de ejemplo si el backend no tiene registros aún
-        const datosMock = [
-          {
-            id: 101,
-            estudiante_id: 5,
-            estudiante_nombre: 'Iver Piñaya Vargas',
-            estudiante_email: 'ipinayav@est.emi.edu.bo',
-            estudiante_saga: 'C11368-9',
-            titulo_tentativo: 'Sistema de Automatización con IA para el caso de estudio Restaurante Kindomg Armando una Arquitectura MVC',
-            palabras_clave: 'IA, automatizacion, arquitectura, mvc, restaurante',
-            pdf_documento_url: 'propuesta_iver_tesis.pdf',
-            estado: 'enviado_a_tutor',
-            fecha_envio: '2026-11-14T09:30:00',
-            fecha_limite_72h: '2026-11-17T09:30:00'
-          }
-        ]
-        setBuzon(datosMock)
+        // Ningún docente tiene propuestas preestablecidas; están a la espera
+        setBuzon([])
       }
     } finally {
       setLoadingBuzon(false)
@@ -86,7 +97,7 @@ export default function TutorPanel({ me, db }) {
 
   const responderPropuesta = async (proyectoId, accion) => {
     setMensajeAccion('')
-    const docenteId = me?.id || 1
+    const docenteId = me?.backendId || me?.id || 1
     const res = await apiResponderPropuestaDocente(docenteId, proyectoId, accion)
 
     // Actualizar en el estado local de la interfaz
@@ -97,16 +108,17 @@ export default function TutorPanel({ me, db }) {
       return p
     }))
 
+    if (!res.exito) {
+      setMensajeAccion(`No se pudo responder la propuesta: ${res.error}`)
+      return
+    }
+
     if (accion === 'aceptar') {
-      // Simular revisores recomendados de inmediato si la API está simulada
-      setRevisoresMap(prev => ({
-        ...prev,
-        [proyectoId]: [
-          { id: 1, revisor_nombre: 'Ing. Patricia Soria', revisor_email: 'psoria@adm.emi.edu.bo', afinidad_score: 91.5 },
-          { id: 2, revisor_nombre: 'Ing. Carlos Fernández', revisor_email: 'cfernandez@adm.emi.edu.bo', afinidad_score: 84.0 }
-        ]
-      }))
-      setMensajeAccion('✅ Has ACEPTADO ser el tutor del proyecto. El algoritmo recomendó a 2 revisores automáticamente.')
+      const revisores = await apiObtenerRevisoresProyecto(proyectoId)
+      if (revisores.exito) {
+        setRevisoresMap(prev => ({ ...prev, [proyectoId]: revisores.datos }))
+      }
+      setMensajeAccion('✅ Has aceptado la tutoría. El segundo docente seleccionado fue asignado como revisor.')
     } else {
       setMensajeAccion('❌ Has RECHAZADO la propuesta. Se le notificó al estudiante para que busque otro tutor.')
     }
@@ -119,15 +131,29 @@ export default function TutorPanel({ me, db }) {
   const cuposLibres = LIMITE_PUPILOS - cantidadPupilos
   const solicitudesPendientes = buzon.filter(p => p.estado === 'enviado_a_tutor').length
 
-  // Agregar materia al perfil
+  // Guardar especialidades en la BD (con fallback local si backend no disponible)
+  const guardarEspecialidadesEnBD = async (nuevaLista) => {
+    const docenteId = me?.backendId || me?.id || datosIniciales.id || 1
+    const res = await apiActualizarPerfilDocente(docenteId, nuevaLista, perfil.materiasDestacadas)
+    if (!res.exito) {
+      setMensajeAccion(`No se pudo actualizar la BD: ${res.error}`)
+    }
+  }
+
+  // Agregar materia al perfil y guardar en BD
   const agregarMateria = (e) => {
     e.preventDefault()
     if (!perfil.nuevaMateria.trim()) return
-    setPerfil({
-      ...perfil,
-      materiasDestacadas: [...perfil.materiasDestacadas, perfil.nuevaMateria.trim()],
-      nuevaMateria: ''
-    })
+    const nuevaLista = [...perfil.materiasDestacadas, perfil.nuevaMateria.trim()]
+    setPerfil({ ...perfil, materiasDestacadas: nuevaLista, nuevaMateria: '' })
+    guardarEspecialidadesEnBD(nuevaLista)
+  }
+
+  // Eliminar materia del perfil y guardar en BD
+  const eliminarMateria = (idx) => {
+    const nuevaLista = perfil.materiasDestacadas.filter((_, i) => i !== idx)
+    setPerfil({ ...perfil, materiasDestacadas: nuevaLista })
+    guardarEspecialidadesEnBD(nuevaLista)
   }
 
   // Agregar certificado al perfil
@@ -261,8 +287,18 @@ export default function TutorPanel({ me, db }) {
           {loadingBuzon && <p className="text-xs text-bone/60">Cargando buzón de solicitudes...</p>}
 
           {!loadingBuzon && buzon.length === 0 && (
-            <div className="panel text-center py-12 space-y-2 text-bone/60">
-              <p>No tienes propuestas de estudiantes pendientes en tu buzón actualmente.</p>
+            <div className="panel text-center py-14 space-y-3 border border-dashed border-bone/20 bg-slate-900/30">
+              <span className="text-4xl block">📬</span>
+              <h3 className="font-bold text-bone text-base">Buzón de Propuestas Vacío</h3>
+              <p className="text-xs text-bone/60 max-w-md mx-auto">
+                Actualmente no tienes propuestas de estudiantes pendientes de revisión. El buzón se actualizará automáticamente cuando un estudiante de 8vo o 9no semestre seleccione tu perfil mediante el Recomendador Neuronal y envíe su propuesta con documento PDF (plazo reglamentario de 72 horas).
+              </p>
+              <div className="pt-2">
+                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                  Estado: Esperando propuestas de estudiantes
+                </span>
+              </div>
             </div>
           )}
 
@@ -343,11 +379,9 @@ export default function TutorPanel({ me, db }) {
                     {/* Botón ver PDF adjunto */}
                     <div>
                       <a
-                        href="#"
-                        onClick={(e) => {
-                          e.preventDefault()
-                          alert(`Abriendo documento formal en PDF adjuntado por ${solicitud.estudiante_nombre}`)
-                        }}
+                        href={`${API_ORIGIN}${solicitud.pdf_documento_url}`}
+                        target="_blank"
+                        rel="noreferrer"
                         className="btn btn-ghost !py-1.5 !px-3 text-xs flex items-center gap-2 border border-bone/20 hover:border-azul"
                       >
                         <span>📄 Ver Documento de Propuesta (PDF)</span>
@@ -449,10 +483,7 @@ export default function TutorPanel({ me, db }) {
                     <span>{mat}</span>
                     <button
                       type="button"
-                      onClick={() => setPerfil({
-                        ...perfil,
-                        materiasDestacadas: perfil.materiasDestacadas.filter((_, idx) => idx !== i)
-                      })}
+                      onClick={() => eliminarMateria(i)}
                       className="text-bone/50 hover:text-rose-400 font-bold ml-1"
                     >
                       ✕

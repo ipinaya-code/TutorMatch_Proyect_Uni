@@ -1,0 +1,17 @@
+{
+  "Ing. Marcelo Quiroga": ["Inteligencia Artificial", "Visión por Computadora", "Redes Neuronales"],
+  "Ing. Roberto Mendoza": ["Desarrollo Web", "Fullstack", "Arquitectura de Software"],
+  "Ing. Patricia Soria": ["Ciberseguridad", "Redes", "Hacking Ético", "Infraestructura"],
+  "Ing. Carlos Arce": ["Internet de las Cosas (IoT)", "Robótica", "Sistemas Embebidos"],
+  "Ing. Valeria Torrico": ["Ciencia de Datos", "Machine Learning", "Análisis Estadístico"],
+  "Ing. Fernando Rojas": ["Cloud Computing", "DevOps", "Microservicios", "Kubernetes"],
+  "Ing. Andrea Morales": ["Gestión de Proyectos TI", "Metodologías Ágiles", "Scrum", "ITIL"],
+  "Lic. Gabriela Paz": ["Bases de Datos", "Big Data", "SQL/NoSQL", "Minería de Datos"],
+  "Ing. Hugo Zeballos": ["Desarrollo Móvil (Android/iOS)", "Flutter", "React Native"],
+  "Ing. Claudia Medina": ["Bioinformática", "Sistemas de Salud Digital", "Telemedicina"],
+  "Ing. Diego Flores": ["Sistemas Distribuidos", "Blockchain", "Criptografía Aplicada"],
+  "Ing. Paola Vargas": ["Realidad Virtual", "Realidad Aumentada", "Videojuegos"],
+  "Ing. Sergio Camacho": ["Automatización Industrial", "PLC", "SCADA", "Domótica"],
+  "Ing. Lucia Benitez": ["Procesamiento de Lenguaje Natural (NLP)", "Chatbots", "LLMs"],
+  "Ing. Javier Navarro": ["Auditoría de Sistemas", "Calidad de Software", "Testing QA"]
+}

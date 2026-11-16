@@ -1,0 +1,601 @@
+Titulo_Proyecto,Especialidad,Nombre_Tutor
+Reconocimiento de melanoma cutaneo mediante redes neuronales convolucionales en Python,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Deteccion de somnolencia en conductores aplicando vision por computadora y OpenCV,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Clasificacion automatica de tumores cerebrales en resonancias magneticas con Deep Learning,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Reconocimiento de placas vehiculares en tiempo real mediante algoritmos YOLO y Python,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Identificacion de plagas en cultivos de tomate usando procesamiento digital de imagenes,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Deteccion de puntos cefalometricos en radiografias dentales con redes neuronales profundas,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Reconocimiento facial con redes siamesas para control de acceso biometrico en Python,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Evaluacion automatizada de precision balistica mediante vision artificial y procesamiento de video,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Traduccion de lengua de senas boliviana en tiempo real mediante estimacion de pose en Python,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Deteccion de equipos de proteccion personal en plantas industriales con vision computacional,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Clasificacion de residuos solidos reciclables empleando redes convolucionales y PyTorch,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Conteo y clasificacion vehicular en intersecciones urbanas mediante analisis de video,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Diagnostico asistido de retinopatia diabetica utilizando arquitecturas ResNet en Python,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Supervision de ejercicios fisicos mediante deteccion de articulaciones por vision artificial,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Reconocimiento optico de caracteres manuscritos aplicando redes neuronales recurrentes y CNN,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Deteccion temprana de incendios forestales en imagenes de drones con aprendizaje profundo,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Control de calidad textil automatizado mediante deteccion visual de defectos en tejidos,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Graduacion y seleccion de granos de cafe por color y tamano usando vision por computadora,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Deteccion de neumonia en radiografias de torax mediante modelos de aprendizaje profundo,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Lectura automatizada de medidores analogicos mediante segmentacion de imagenes en Python,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Asistente virtual basado en procesamiento de lenguaje natural para consultas de reglamentos,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Deteccion de indicadores de depresion y ansiedad en textos mediante modelos Transformers,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Recomendacion de tutores academicos aplicando embeddings semanticos y redes neuronales,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Analisis de sentimiento en resenas comerciales utilizando procesamiento de lenguaje natural,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Clasificacion automatica de reclamos financieros mediante algoritmos de Machine Learning y NLP,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Transcripcion Speech-to-Text y resumen automatico de consultas medicas con inteligencia artificial,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Deteccion de plagio semantico y parafrasis en tesis universitarias usando vectores de palabras,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Evaluacion automatica de respuestas abiertas en examenes mediante similitud del coseno y BERT,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Agente conversacional con generacion aumentada por recuperacion para soporte estudiantil,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Extraccion de entidades nombradas en curriculums vitae para preseleccion laboral con Python,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Clasificador de noticias falsas en redes sociales empleando redes LSTM bidireccionales,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Traduccion automatica neuronal espanol-quechua para terminologia de atencion medica primaria,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Motor de busqueda semantica en normativas legales utilizando indexacion vectorial y NLP,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Generacion automatica de actas de reuniones a partir de voz con modelos de lenguaje en Python,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Analisis automatico de clausulas contractuales mediante mineria de texto y aprendizaje supervisado,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Tutor inteligente para aprendizaje de programacion con retroalimentacion generativa en Python,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Triaje medico preliminar asistido por procesamiento de lenguaje natural y arboles de decision,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Filtrado inteligente de correo no deseado y phishing en espanol mediante modelos secuenciales,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Asesoramiento automatizado sobre derechos de personas con discapacidad con modelos de lenguaje,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Agrupamiento tematico de articulos cientificos empleando algoritmos de clustering y NLP,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Modelo predictivo de resultados electorales en Bolivia aplicando mineria de datos y estadistica,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Prediccion de desercion estudiantil universitaria mediante analisis estadistico y Random Forest,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Pronostico de demanda e inventario de medicamentos utilizando series temporales ARIMA y Python,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Evaluacion de riesgo crediticio y probabilidad de mora en cooperativas mediante XGBoost,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Deteccion de fraude en transacciones financieras aplicando algoritmos de aislamiento de anomalias,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Segmentacion de clientes bancarios mediante mineria de datos y algoritmos K-Means,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Prediccion de tarifas dinamicas y ocupacion hotelera basada en regresion multivariable,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Analisis predictivo de rendimiento agricola en cultivos de soya segun variables climaticas,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Estimacion automatizada de precios de bienes inmuebles urbanos empleando regresion estadistica,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Pronostico de consumo electrico industrial mediante analisis de series de tiempo en Python,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Analisis de supervivencia y prediccion de rotacion de personal en empresas manufactureras,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Mineria de datos epidemiologicos para proyeccion de brotes de dengue por zonas geograficas,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Prediccion de fallas mecanicas en flotas de transporte pesado mediante analisis de datos historicos,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Modelo actuarial de prediccion de siniestralidad vehicular para companias aseguradoras,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Analisis de canasta de mercado y reglas de asociacion para recomendacion en supermercados,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Prediccion de tiempos de despacho aduanero utilizando regresion con bosques aleatorios,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Evaluacion estadistica de factores de rendimiento academico en educacion secundaria,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Pronostico de ventas estacionales en la industria lactea mediante suavizamiento exponencial,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Deteccion de patrones de evasion tributaria aplicando tecnicas de mineria de datos,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Modelo predictivo de congestion de trafico urbano basado en datos historicos de movilidad,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Laboratorio de analisis forense digital y preservacion de evidencia bajo la norma ISO 27037,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Hardening y auditoria de seguridad en servidores Debian Linux para infraestructura financiera,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Analisis forense de memoria RAM para deteccion de malware residente en servidores corporativos,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Implementacion de sistema de deteccion de intrusos en servidores Linux con Wazuh y Suricata,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Recuperacion forense de artefactos digitales y reconstruccion de eventos en sistemas Windows Server,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Entorno aislado Sandbox para analisis dinamico de ransomware y comportamiento de binarios,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Configuracion segura de servidores DNS BIND9 con DNSSEC y mitigacion de envenenamiento de cache,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Correlacion centralizada de logs de seguridad SIEM para respuesta ante incidentes en servidores,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Investigacion forense de ataques a servidores web Nginx mediante analisis de registros y payloads,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Automatizacion de parches de seguridad y control de integridad de archivos en Rocky Linux,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Cadena de custodia digital automatizada con verificacion de hashes SHA-256 para peritaje informatico,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Despliegue de honeypots de alta interaccion en servidores virtuales para estudio de vectores de ataque,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Analisis forense en contenedores y entornos virtualizados tras incidentes de escalada de privilegios,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Mitigacion de ataques de fuerza bruta y aseguramiento de acceso OpenSSH con certificados en Linux,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Peritaje informatico sobre dispositivos moviles Android para extraccion legal de mensajeria,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Implementacion de servidor proxy inverso con firewall de aplicaciones web ModSecurity en Debian,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Deteccion de rootkits y puertas traseras a nivel de kernel en servidores de produccion Linux,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Respuesta automatizada ante incidentes de compromiso en Active Directory y Windows Server,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Analisis forense de trafico de red capturado en archivos PCAP para identificacion de exfiltracion,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Aseguramiento de servidores de correo institucional contra suplantacion con SPF DKIM y DMARC,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Diseno de infraestructura de red Zero Trust con segmentacion VLAN y enrutadores MikroTik,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Optimizacion de calidad de servicio QoS para trafico de voz y video en redes universitarias,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Implementacion de red definida por software SDN para control dinamico de rutas con OpenFlow,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Despliegue de enlaces troncales redundantes con protocolos OSPF y VRRP en switches de capa 3,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Diseno de red metropolitana de fibra optica GPON para distribucion de internet en municipios,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Interconexion segura de sucursales mediante tuneles VPN IPsec y WireGuard en equipos MikroTik,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Plan de migracion dual-stack IPv4 a IPv6 con politicas de filtrado en firewalls perimetrales,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Diseno de radioenlace de microondas en banda libre para conectividad de postas sanitarias rurales,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Arquitectura de red inalambrica de alta densidad WiFi 6 con autenticacion centralizada RADIUS,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Monitoreo proactivo de latencia y disponibilidad de nodos de red mediante protocolo SNMP,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Implementacion de telefonia IP corporativa con central Asterisk y priorizacion de paquetes SIP,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Simulacion y mitigacion de ataques de capa 2 ARP Spoofing y DHCP Starvation en redes LAN,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Control de acceso a la red NAC basado en certificados 802.1X para equipos institucionales,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Ingenieria de trafico con MPLS para optimizacion de enlaces en proveedores de servicios ISP,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Automatizacion de respaldos de configuracion en routers Cisco y MikroTik mediante Ansible,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Diseno de topologia de red de alta disponibilidad para centros de datos hospitalarios,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Mitigacion de ataques de denegacion de servicio distribuido DDoS mediante analisis NetFlow,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Segmentacion de red industrial para aislamiento seguro de sistemas de control SCADA,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Evaluacion de propagacion de senal y roaming sin cortes en redes inalambricas de campus,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Implementacion de cortafuegos perimetral pfSense con balanceo de multiples proveedores de internet,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Implementacion de firma digital y criptografia asimetrica RSA para validacion de documentos,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Pruebas de penetracion y analisis de vulnerabilidades OWASP Top 10 en portales financieros,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Auditoria de seguridad de la informacion basada en la norma ISO 27001 para cooperativas,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Protocolo de cifrado extremo a extremo con curvas elipticas para mensajeria corporativa,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Evaluacion de vulnerabilidades de inyeccion SQL y Cross-Site Scripting en sistemas gubernamentales,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Sistema de autenticacion multifactor sin contrasenas basado en estandares FIDO2 y llaves fisicas,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Cifrado transparente de archivos sensibles utilizando el algoritmo AES-256 y gestion de llaves,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Auditoria tecnica de seguridad en aplicaciones moviles bancarias contra ingenieria inversa,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Implementacion de infraestructura de clave publica PKI interna para emision de certificados digitales,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Anonimizacion y enmascaramiento criptografico de datos clinicos para proteccion de privacidad,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Analisis estatico y dinamico de seguridad en codigo fuente para prevencion de fallos logicos,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Registro inmutable de certificados academicos mediante funciones hash criptograficas y cadenas de bloques,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Gestion de riesgos de seguridad informatica bajo la metodologia MAGERIT en entidades publicas,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Pruebas de hacking etico y aseguramiento de APIs REST frente a exposicion excesiva de datos,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Esquema de comparticion secreta de Shamir para custodia distribuida de llaves maestras,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Evaluacion de resistencia frente a ataques de ingenieria social y phishing en personal administrativo,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Verificacion de integridad de votos electronicos mediante pruebas criptograficas de conocimiento cero,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Esteganografia digital avanzada para ocultamiento seguro de marcas de agua en imagenes medicas,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Auditoria de controles de acceso basados en roles y privilegios minimos en sistemas empresariales,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Generador de numeros pseudoaleatorios criptograficamente seguros con validacion estadistica,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Analisis y diseno de sistema ERP para planificacion de produccion e inventarios en fabricas,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Diseno de sistema de informacion gerencial para control de obras civiles y presupuestos,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Modelado e ingenieria de requerimientos para sistema de gestion hospitalaria y turnos medicos,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Sistema de gestion de cadena de suministro y abastecimiento para distribuidoras de ferreteria,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Analisis y diseno orientado a objetos con UML para sistema de control de activos fijos municipales,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Sistema de planificacion de recursos empresariales para control de acopio y derivados lacteos,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Diseno de arquitectura de software para gestion de recursos humanos y planillas salariales,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Automatizacion de flujos de trabajo administrativos y seguimiento de tramites institucionales,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Sistema de informacion para control de costos de produccion y lotes en plantas cementeras,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Ingenieria de requerimientos y prototipado para sistema de administracion de importaciones,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Diseno de sistema de gestion academica para matriculacion y kardex en institutos tecnicos,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Sistema de control de mantenimiento preventivo de maquinaria pesada basado en procesos BPMN,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Modelado de procesos de negocio para sistema de creditos y cobranzas en microfinancieras,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Sistema de informacion para gestion de proyectos agroecologicos bajo metodologia de marco logico,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Analisis y diseno de sistema de facturacion y control de lectura de medidores de agua potable,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Sistema integral de gestion de ordenes de trabajo y cotizaciones para imprentas industriales,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Estandarizacion y diseno de sistema de gestion de calidad documental bajo normas ISO 9001,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Sistema de administracion de contratos de alquiler y control de expensas en centros comerciales,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Diseno metodologico de software para control de pesaje de minerales y liquidacion de regalias,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Sistema de planificacion y seguimiento de auditorias internas para entidades aseguradoras,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Diseno de Data Warehouse y procesos ETL en SQL Server para inteligencia de negocios comercial,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Optimizacion de consultas complejas e indexacion avanzada en PostgreSQL para sistemas bancarios,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Arquitectura de base de datos distribuida con replicacion maestro-esclavo para farmacias,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Modelado relacional y control de concurrencia transaccional ACID para sistema de boleteria,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Migracion e integracion de bases de datos heterogeneas hacia PostgreSQL en el sector publico,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Diseno de base de datos espacial con PostGIS para catastro urbano y registro de predios,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Implementacion de auditoria mediante triggers y procedimientos almacenados en motores SQL,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Modelado híbrido relacional y NoSQL en MongoDB para catalogo de comercio electronico masivo,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Particionamiento horizontal Sharding de tablas historicas de facturacion para alto rendimiento,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Sistema transaccional de kardex valorado e inventario multi-almacen con integridad referencial,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Diseno de cubos OLAP multidimensionales para analisis financiero en cadenas de supermercados,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Estrategia de recuperacion ante desastres y respaldos incrementales en caliente para SQL Server,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Base de datos orientada a grafos en Neo4j para trazabilidad de redes de contactos y logistica,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Sincronizacion bidireccional de bases de datos desconectadas SQLite hacia servidor central,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Normalizacion y refactorizacion de esquemas de bases de datos heredadas en hospitales,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Almacenamiento de series temporales en TimescaleDB para registros masivos de telemetria,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Control de bloqueos pesimistas y optimistas en transacciones simultaneas de reservas de vuelos,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Repositorio centralizado de historias clinicas electronicas con estandares de datos interoperables,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Automatizacion de limpieza y deduplicacion de registros maestros de clientes mediante SQL,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Motor de reportes dinamicos conectado a vistas materializadas de alto desempeno en PostgreSQL,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Desarrollo de backend basado en arquitectura de microservicios con Spring Boot y Docker,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+API RESTful de alta concurrencia con FastAPI y cache en Redis para plataforma de pedidos,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Sistema de mensajeria asincrona y procesamiento de colas con RabbitMQ y contenedores Docker,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Migracion de backend monolitico hacia microservicios desacoplados con Django REST Framework,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Pasarela de integracion de pagos electronicos y generacion de codigos QR dinamicos mediante API,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Implementacion de API Gateway con autenticacion JWT y limitacion de tasa de peticiones,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Backend en tiempo real con WebSockets y Socket.IO para seguimiento de envios y encomiendas,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Arquitectura orientada a eventos con Apache Kafka para sincronizacion de microservicios,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Servicio backend de facturacion electronica en linea con firma digital e integracion SOAP y REST,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Orquestacion local de entornos de desarrollo multi-contenedor utilizando Docker Compose y Nginx,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Servidor GraphQL para consulta eficiente de datos complejos en plataformas educativas,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Implementacion del patron Saga para transacciones distribuidas en microservicios de reservas,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Motor backend de notificaciones multicanal por correo electronico Telegram y WebPush,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Servicio de autenticacion unica SSO centralizado basado en el protocolo OAuth2 y OpenID,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Backend multi-tenant con aislamiento de esquemas para software contable como servicio,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Procesamiento en segundo plano de reportes pesados mediante Celery y contenedores en Python,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Arquitectura hexagonal en backend Java para desacoplamiento de reglas de negocio bancarias,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Servicio de comunicacion de voz y video WebRTC integrado a backend de telemedicina,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Pruebas automatizadas de integracion y contratos para ecosistemas de microservicios REST,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Optimizacion de tiempos de respuesta en APIs mediante serializacion binaria con protocolo gRPC,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Aplicacion web progresiva PWA con soporte offline para gestion de campeonatos deportivos,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Desarrollo de plataforma web interactiva con React para reserva de mesas en restaurantes,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Dashboard web responsive de visualizacion de indicadores para pequenas empresas comerciales,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Aplicacion web progresiva para control de entrenamiento deportivo y registro de cargas fisicas,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Portal web accesible bajo estandares WCAG para personas con discapacidad visual,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Tienda virtual de comercio electronico con carrito de compras persistente y diseno Mobile First,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Sistema web con sincronizacion en segundo plano Service Workers para encuestas en zonas sin red,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Plataforma web educativa con elementos de gamificacion interactiva para ninos de primaria,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Rediseño de experiencia de usuario UX e interfaz frontend para portal de tramites universitarios,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Aplicacion web de una sola pagina SPA para gestion de turnos y pantalla de llamado en clinicas,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Catalogo web interactivo para alquiler de trajes folkloricos con reservas en linea,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Editor web colaborativo en tiempo real de diagramas y notas para grupos de estudio,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Aplicacion web progresiva para gestion de pedidos de salon en cafeterias mediante codigos QR,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Libreria de componentes visuales reutilizables Design System para aplicaciones web institucionales,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Portal web turistico municipal con agenda de eventos cultural y galeria multimedia optimizada,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Aplicacion web de punto de venta POS con almacenamiento local IndexedDB para ferias comerciales,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Plataforma frontend para seguimiento visual de flujo de tareas con tableros Kanban interactivos,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Optimizacion de carga y renderizado del lado del servidor SSR en portales de noticias digitales,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Sistema web de agendamiento de citas para salones de belleza con recordatorios automaticos,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Aplicacion web progresiva para control de asistencia escolar y comunicacion con padres de familia,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Aplicacion movil multiplataforma con geolocalizacion en tiempo real para lineas de radiotaxi,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Sistema movil con mapas offline y sincronizacion diferida para relevamiento de datos agricolas,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Aplicacion movil en Flutter para preventa y distribucion de productos con ruteo GPS,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Guia turistica movil interactiva basada en proximidad geografica y rutas patrimoniales,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Aplicacion movil de alerta temprana y boton de panico vecinal con envio de coordenadas GPS,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Sistema movil de lectura de codigos de barras mediante camara para toma fisica de inventarios,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Aplicacion movil con gamificacion para aprendizaje de primeros auxilios en grupos juveniles,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Monitoreo movil de recorrido de camiones recolectores de basura con notificaciones por cercania,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Aplicacion movil para control de rondas de guardias de seguridad mediante etiquetas NFC y GPS,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Billetera movil estudiantil para pagos sin contacto en comedores y fotocopiadoras del campus,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Aplicacion movil de seguimiento nutricional y recordatorio de medicacion para adultos mayores,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Registro movil de inspecciones tecnicas de campo con captura fotografica georreferenciada,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Aplicacion movil colaborativa para reporte ciudadano de baches y desperfectos en vias urbanas,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Sistema movil de despacho de ambulancias y localizacion de centros de salud con emergencias,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Aplicacion nativa Android con comunicacion Bluetooth de bajo consumo para telemetria deportiva,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Guia movil de rutas de transporte publico urbano con calculo de transbordos y tiempos de viaje,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Aplicacion movil para adopcion responsable y localizacion de mascotas extraviadas por zonas,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Cuaderno de campo digital en dispositivos moviles para monitoreo de biodiversidad en parques,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Aplicacion movil de reservas de canchas sinteticas con geolocalizacion y pago por QR,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Verificador movil de autenticidad de entradas para conciertos mediante escaneo criptografico,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Sistema IoT de monitoreo de humedad y riego automatizado en invernaderos mediante ESP32,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Red de sensores inalambricos con LoRaWAN para monitoreo de contenedores soterrados de basura,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Control y monitoreo en tiempo real de cadena de frio en camaras de vacunas usando MQTT,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Estacion meteorologica automatizada basada en microcontroladores para alerta de heladas agricolas,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Dispositivo IoT de medicion de calidad del aire y dioxido de carbono en aulas universitarias,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Sistema embebido de telemetria y corte remoto de encendido para motocicletas mediante GSM,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Automatizacion de parametros de temperatura y oxigeno disuelto en estanques de piscicultura,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Prototipo IoT de deteccion de fugas de gas licuado con cierre automatico de electrovalvula,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Sistema de control de acceso vehicular automatizado mediante lectura de tarjetas RFID UHF,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Monitoreo de vibraciones y temperatura en motores industriales con sensores IoT e interfaz web,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Medidor inteligente de consumo de agua domiciliario con transmision inalambrica de datos,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Sistema automatizado de dosificacion de alimento y control ambiental para galpones avicolas,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Red de nodos sensores para alerta temprana de crecida de rios y desbordes en cuencas,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Control domotico de iluminacion y climatizacion eficiente en edificios mediante protocolo Zigbee,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Collar IoT con rastreo satelital y sensores de actividad para monitoreo de ganado bovino,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Sistema embebido en Raspberry Pi para control de semaforos adaptativos segun flujo vehicular,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Incubadora neonatal de bajo costo con monitoreo remoto de signos vitales y control termico,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Monitoreo de nivel de llenado en silos de almacenamiento de granos mediante sensores ultrasonicos,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Sistema IoT de gestion de parqueos urbanos con deteccion magnetica de espacios libres,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Automatizacion de cultivo hidroponico vertical con control de pH y conductividad electrica,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Implementacion de pipeline CI/CD automatizado con GitHub Actions y despliegue en la nube,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Arquitectura de alta disponibilidad y autoescalado en Kubernetes para plataformas de examenes,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Aprovisionamiento de infraestructura como codigo con Terraform en Amazon Web Services,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Sistema de observabilidad y monitoreo de servicios en la nube con Prometheus y Grafana,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Procesamiento distribuido de archivos masivos utilizando funciones Serverless AWS Lambda,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Estrategia de despliegue continuo Blue-Green sin tiempo de inactividad para portales bancarios,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Cluster de almacenamiento distribuido tolerante a fallos para repositorio digital universitario,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Plataforma de juez en linea distribuido en contenedores para competencias de programacion,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Automatizacion de pruebas de carga y estres en pipelines de integracion continua con Locust,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Migracion de infraestructura local hacia arquitectura nativa de la nube con balanceo elastico,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Sistema distribuido de cache y entrega de contenido multimedia para educacion virtual,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Gestion centralizada de secretos y credenciales dinamicas en entornos Cloud con HashiCorp Vault,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Orquestacion de flujos de trabajo distribuidos en la nube para generacion masiva de certificados,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Monitoreo proactivo de acuerdos de nivel de servicio SLA en arquitecturas multi-nube,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Implementacion de malla de servicios Istio para control de trafico y telemetria en Kubernetes,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Sistema de respaldos inmutables en almacenamiento de objetos Cloud para recuperacion rapida,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Entorno efimero de preproduccion automatizado por cada Pull Request mediante DevOps,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Optimizacion de costos de computo en la nube mediante dimensionamiento dinamico de instancias,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Sincronizacion distribuida de estado en nodos geograficamente separados mediante consenso Raft,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Registro centralizado de eventos en la nube utilizando la pila Elasticsearch Logstash y Kibana,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Optimizacion de rutas de reparto logistico aplicando algoritmos basados en teoria de grafos,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Generacion automatica de horarios academicos sin choques mediante algoritmos geneticos en C++,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Resolucion del problema de satisfaccion de restricciones CSP para asignacion de aulas y tribunales,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Simulacion de eventos discretos para optimizacion de colas de atencion en emergencias medicas,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Algoritmo metaheuristico de colonia de hormigas para recoleccion optima de residuos solidos,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Optimizacion de corte bidimensional de planchas de madera y vidrio mediante programacion dinamica,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Simulacion estocastica de Monte Carlo para evaluacion de riesgos en proyectos de inversion,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Planificacion optima de turnos de personal de enfermeria mediante programacion lineal entera,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Algoritmo de busqueda A-Estrella con pesos dinamicos para navegacion autonoma en almacenes,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Simulacion de flujo vehicular microscopico para sincronizacion optima de olas verdes semaforicas,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Empaquetamiento tridimensional de carga en contenedores de exportacion con heuristicas voraces,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Suite de pruebas estadisticas de aleatoriedad Chi-cuadrado y Poker para generadores congruenciales,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Asignacion optima de frecuencias en redes celulares mediante algoritmos de coloracion de grafos,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Simulacion basada en agentes para modelado de evacuacion peatonal en estadios y edificios,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Algoritmo de recocido simulado para balanceo de lineas de ensamble en plantas industriales,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Optimizacion de ubicacion de antenas e infraestructura de emergencia mediante diagramas de Voronoi,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Compresion sin perdida de secuencias geneticas utilizando arboles de sufijos y codificacion Huffman,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Calculo de flujo maximo en redes de distribucion de agua potable con el algoritmo Dinic,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Motor de emparejamiento estable Gale-Shapley para asignacion de plazas de internado rotatorio,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Simulacion matematica de propagacion de epidemias mediante ecuaciones diferenciales SIR,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Simulador en realidad virtual para practicas de laboratorio de fisica y ondas estacionarias,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Aplicacion con realidad aumentada para ensenanza interactiva de geometria analitica espacial,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Recorrido virtual interactivo en 360 grados con WebGL para promocion turistica e historica,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Simulador 3D del proceso de pasteurizacion y elaboracion de derivados lacteos en Unity,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Visualizador en realidad aumentada de catalogos de muebles a escala real para interiores,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Simulador de entrenamiento de poligono de tiro virtual con analisis de punteria en 3D,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Aplicacion de realidad aumentada para generacion de terrenos topograficos y simbologia tactica,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Simulador de maquina de compresion automatica para ensayos de resistencia en ingenieria civil,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Videojuego serio en 2D y 3D para rehabilitacion cognitiva y motriz en pacientes pediatricos,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Atlas anatomico interactivo en tres dimensiones con realidad aumentada para estudiantes de medicina,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Simulador de realidad virtual para entrenamiento de protocolos de evacuacion ante incendios,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Guia interactiva con realidad aumentada para museos arqueologicos y reconstruccion de piezas 3D,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Simulador de ensamblaje y mantenimiento de computadoras en entorno virtual tridimensional,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Visualizacion interactiva de estructuras moleculares y enlaces quimicos mediante WebXR,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Entorno virtual inmersivo para exposicion de riesgos en deportes extremos y turismo de aventura,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Asistente en realidad aumentada para mantenimiento paso a paso de motores automotrices,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Simulador de conduccion vial urbana con senaletica boliviana para educacion de conductores,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Modelado y renderizado 3D en navegador con Three.js para personalizacion de prendas deportivas,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Laboratorio virtual de circuitos electricos y uso de osciloscopio en tres dimensiones,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Videojuego educativo de logica matematica y resolucion de acertijos con fisica simulada,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Identificacion biometrica mediante reconocimiento de patrones de iris con redes convolucionales en Python,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Conteo y clasificacion automatizada de globulos rojos y blancos en imagenes microscopicas de sangre,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Deteccion de grietas y fisuras en pavimento asfaltico mediante analisis de video y aprendizaje profundo,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Clasificacion de muestras de minerales metalicos por textura y color aplicando vision por computadora,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Seguimiento ocular en tiempo real mediante camara web para control de puntero en personas con discapacidad,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Deteccion preventiva de armas blancas y de fuego en camaras de seguridad con arquitecturas YOLO,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Estimacion del indice de madurez de frutas citricas en arboles mediante segmentacion de imagenes,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Analisis automatizado de movilidad y morfologia celular en muestras de laboratorio mediante OpenCV,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Evaluacion biomecanica de postura en levantamiento de pesas usando estimacion de esqueleto por video,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Reconocimiento de senales de transito verticales en tiempo real para sistemas de conduccion asistida,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Segmentacion semantica de lesiones pulmonares en tomografias computarizadas mediante redes U-Net,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Verificacion offline de firmas manuscritas en cheques bancarios empleando redes neuronales siamesas,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Deteccion de intrusos y obstaculos en vias ferroviarias mediante camaras termicas y vision artificial,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Clasificacion de especies de madera forestal a partir de imagenes macroscopicas con Deep Learning,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Medicion optica del desgaste de banda de rodadura en neumaticos mediante procesamiento de imagenes,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Deteccion automatica de caidas en adultos mayores utilizando analisis de secuencias de video en Python,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Diagnóstico visual de enfermedades foliares en cultivos de papa aplicando redes convolucionales ligeras,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Conteo automatizado de cabezas de ganado bovino en imagenes aereas capturadas por drones,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Reconocimiento de microexpresiones faciales para medicion de nivel de atencion estudiantil en clases,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Reconstruccion de superresolucion en imagenes satelitales agricolas mediante redes generativas adversariales,Inteligencia Artificial; Vision Computacional; Programacion,Ing. Marcelo Quiroga
+Clasificacion y enrutamiento automatico de tickets de soporte tecnico TI mediante lenguaje natural,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Generacion de resumenes extractivos y abstractivos de sentencias judiciales con modelos Transformers,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Deteccion temprana de ciberacoso y lenguaje hostil en foros estudiantiles usando redes recurrentes,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Extraccion automatica de efectos adversos a medicamentos en reportes clinicos mediante mineria de texto,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Asistente conversacional para consulta de prerequisitos y malla curricular con embeddings semanticos,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Analisis de polaridad y opinion ciudadana sobre servicios publicos municipales en redes sociales,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Correccion gramatical y de estilo automatizada para redaccion de informes tecnicos en espanol,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Sistema de preguntas y respuestas sobre manuales de mantenimiento industrial utilizando arquitectura RAG,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Clasificacion taxonomica de patentes tecnologicas y articulos academicos empleando algoritmos de NLP,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Deteccion de intencion de compra y abandono en conversaciones de chat comercial con Machine Learning,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Anonimizacion automatica de nombres propios y datos sensibles en expedientes legales con NER,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Recomendacion de bibliografia cientifica personalizada a partir del resumen del perfil de tesis,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Generacion automatizada de preguntas de opcion multiple a partir de textos educativos en Python,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Clasificacion de severidad de accidentes viales mediante analisis de texto de partes policiales,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Agrupamiento semantico de respuestas abiertas en encuestas de satisfaccion universitaria con BERT,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Moderacion automatica de comentarios en portales de noticias mediante deteccion de discurso de odio,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Agente inteligente de orientacion tributaria para contribuyentes basado en procesamiento de lenguaje natural,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Extraccion de relaciones semanticas entre sintomas y patologias en literatura medica en espanol,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Traduccion asistida de terminologia legal espanol-aimara empleando modelos secuencia a secuencia,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Priorizacion automatica de correos electronicos corporativos segun urgencia mediante aprendizaje supervisado,Procesamiento de Lenguaje Natural; Machine Learning; Programacion,Lic. Andrea Mendoza
+Pronostico de cotizaciones internacionales de minerales de exportacion mediante series temporales,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Modelo de propension de compra de seguros de vida aplicando regresion logistica y mineria de datos,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Analisis estadistico multivariable de factores socioeconomicos asociados a la desnutricion infantil,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Prediccion de niveles de caudal y almacenamiento en represas hidrologicas con modelos autorregresivos,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Estimacion estadistica de vida util remanente en transformadores de distribucion electrica,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Segmentacion de perfiles de consumo residencial de agua potable mediante algoritmos de clustering,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Prediccion de cancelacion de reservas en aerolineas utilizando modelos de Gradient Boosting,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Modelado estadistico de correlacion entre contaminacion del aire e infecciones respiratorias agudas,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Calificacion crediticia alternativa para comerciantes minoristas mediante arboles de decision,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Pronostico de recaudacion tributaria municipal por concepto de impuestos prediales y patentes,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Deteccion de sobrefacturacion y anomalias en prestaciones de seguros de salud con mineria de datos,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Curvas de declinacion y prediccion de produccion en pozos gasiferos mediante regresion no lineal,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Reduccion de dimensionalidad y analisis de componentes principales en censos demograficos,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Estimacion de demanda horaria de pasajeros en lineas de transporte masivo por cable y buses,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Analisis predictivo de ejecucion de garantias postventa en distribuidoras de electrodomesticos,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Valoracion estadistica del rendimiento deportivo de futbolistas mediante metricas avanzadas de datos,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Prediccion de desabastecimiento de reactivos clinicos en laboratorios hospitalarios con series de tiempo,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Identificacion de patrones de accidentabilidad laboral en la industria de la construccion con mineria de datos,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Pronostico de variacion de precios de productos agricolas de la canasta familiar en mercados mayoristas,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Evaluacion cuantitativa de impacto en campanas de fidelizacion comercial mediante inferencia estadistica,Ciencia de Datos; Mineria de Datos; Estadistica Computacional,Ing. Roberto Navarro
+Recuperacion forense de archivos eliminados y particiones danadas en sistemas de archivos ext4 en Linux,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Aseguramiento y auditoria de configuracion en servidores de bases de datos PostgreSQL bajo Debian,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Deteccion de tuneles encubiertos y exfiltracion de informacion a traves del protocolo DNS en servidores,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Peritaje informatico de bitacoras del sistema tras incidentes de acceso no autorizado en servidores web,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Implementacion de politicas de control de acceso obligatorio con SELinux y AppArmor en servidores Linux,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Analisis estatico y dinamico de muestras de malware ELF dirigidas a servidores de infraestructura,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Investigacion forense de instantaneas en maquinas virtuales comprometidas por ataques de criptomineria,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Monitoreo de integridad del registro del sistema y deteccion de persistencia en Windows Server,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Bastionado y mitigacion de vulnerabilidades en servidores de aplicaciones Apache Tomcat y Nginx,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Reconstruccion forense de sesiones de transferencia de archivos a partir de capturas de trafico de red,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Centralizacion de autenticacion segura en servidores Linux mediante Kerberos y directorios OpenLDAP,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Deteccion forense de inyeccion de procesos en memoria volatil mediante el framework Volatility,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Rastreo pericial de cabeceras de correo electronico y servidores de origen en casos de estafa digital,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Automatizacion de auditorias de cumplimiento de seguridad CIS Benchmark en granjas de servidores Linux,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Confinamiento seguro de demonios de red mediante jaulas chroot y espacios de nombres en Debian,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Analisis forense de tareas programadas cron y servicios systemd manipulados para puertas traseras,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Implementacion de servidor Bastion Host con auditoria y grabacion de sesiones de administracion SSH,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Inspeccion forense de volcados de nucleo ante ataques de denegacion de servicio a nivel de sistema operativo,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Aseguramiento de hipervisores de virtualizacion frente a ataques de escape de maquinas virtuales,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Adquisicion forense en caliente y preservacion criptografica de evidencias en arreglos de discos RAID,Administracion de Servidores; Ciberseguridad; Informatica Forense,Ing. Oscar Telleria
+Diseno de red troncal con enrutamiento externo BGP y filtrado de prefijos para proveedores de internet,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Microsegmentacion de red en centros de datos institucionales para contencion de movimiento lateral,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Planificacion y optimizacion de enlaces inalambricos punto a multipunto en topografias montanosas,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Alta disponibilidad de puerta de enlace mediante protocolos VRRP y HSRP en switches multicapa,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Diseno de red pasiva de fibra optica FTTH para provision de internet de banda ancha en condominios,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Prevencion de bucles de conmutacion y tormentas de difusion mediante Rapid Spanning Tree y PortFast,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Implementacion de firewall de nueva generacion para filtrado de capa 7 y control de aplicaciones,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Diseno de infraestructura de red dedicada y segura para camaras de videovigilancia ciudadana,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Diagnostico y reestructuracion de cableado estructurado categoria 6A para eliminacion de cuellos de botella,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Configuracion de tuneles GRE cifrados con IPsec para redundancia de enlaces WAN en entidades financieras,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Aislamiento de trafico entre departamentos mediante listas de control de acceso extendidas en routers,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Arquitectura de red de comunicaciones resiliente para telecontrol de subestaciones electricas,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Analisis y reduccion de jitter y perdida de paquetes en enlaces de telemedicina de larga distancia,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Enrutamiento basado en politicas PBR para distribucion inteligente de trafico entre multiples enlaces ISP,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Proteccion del plano de control y autenticacion criptografica de vecinos en redes con protocolo OSPF,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Despliegue de red inalambrica mallada Mesh para cobertura de comunicaciones en operaciones mineras,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Estudio de linea de vista zona de Fresnel y atenuacion por lluvia en radioenlaces de microondas,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Implementacion de concentrador VPN con autenticacion de doble factor para acceso remoto corporativo,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Diseno de zona desmilitarizada DMZ con doble cortafuegos para exposicion segura de servidores publicos,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Aprovisionamiento automatizado de VLANs y troncales en conmutadores de red mediante scripts en Python,Redes y Telecomunicaciones; Infraestructura de Red; Seguridad Perimetral,Ing. Luis Arce
+Esquema de cifrado homomorfico parcial para procesamiento privado de estadisticas salariales,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Auditoria tecnica de seguridad e integridad criptografica en plataformas de votacion electronica,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Evaluacion de algoritmos criptograficos post-cuanticos para proteccion de firmas digitales a largo plazo,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Deteccion de vulnerabilidades de control de acceso roto IDOR en portales de tramites municipales,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Implementacion de autoridad de sellado de tiempo criptografico para fechado cierto de contratos digitales,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Auditoria de sistemas de informacion bajo el marco COBIT para evaluacion de controles tecnologicos,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Protocolo de firma digital ciega para garantizar el secreto de identidad en buzones de denuncias,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Analisis de vulnerabilidades en la generacion y validacion de tokens JWT en arquitecturas web,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Diseno de boveda digital cifrada para almacenamiento seguro de llaves privadas y certificados digitales,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Pruebas de penetracion de caja gris sobre sistemas transaccionales de cooperativas de ahorro y credito,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Verificacion criptografica de autenticidad e integridad de paquetes de actualizacion de software,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Auditoria de segregacion de funciones y trazabilidad de bitacoras en sistemas contables empresariales,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Gestion centralizada de llaves de cifrado simetrico y rotacion automatica para bases de datos,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Evaluacion de politicas de prevencion de perdida de datos DLP ante extraccion por puertos fisicos,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Protocolo de autenticacion mutua desafio-respuesta basado en criptografia asimetrica para clientes web,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Auditoria de configuraciones TLS y deteccion de suites de cifrado debiles en portales institucionales,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Elaboracion de matriz de riesgos tecnologicos y plan de continuidad de negocio para entidades financieras,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Cifrado basado en atributos para control de acceso criptografico a historiales medicos compartidos,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Auditoria de cumplimiento del estandar de seguridad de datos PCI-DSS en pasarelas de cobro con tarjeta,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Validacion en tiempo real de revocacion de certificados digitales mediante respondedores OCSP,Ciberseguridad; Criptografia; Auditoria de Sistemas,Lic. Natalia Gomez
+Analisis y diseno de sistema integrado de gestion administrativa y contable para cooperativas mineras,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Ingenieria de requerimientos para plataforma de control de contrataciones y licitaciones de obras publicas,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Diseno de sistema ERP para administracion de flotas de transporte internacional de carga pesada,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Modelado de procesos de negocio y diseno de sistema para administracion de clinicas odontologicas,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Sistema de informacion para planificacion presupuestaria y seguimiento de mantenimiento vial,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Analisis y diseno de software para gestion de aportes afiliaciones y prestaciones en cajas de salud,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Diseno de sistema de planificacion de recursos de manufactura MRP para fabricas de alimentos y embutidos,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Ingenieria de requerimientos y modelado UML para sistema de gestion administrativa en colegios privados,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Diseno de sistema de informacion para control de acopio certificacion organica y exportacion de quinua,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Analisis y diseno de sistema centralizado de compras proveedores y logistica para supermercados,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Sistema ERP para control de envasado distribucion y comercializacion en plantas engarrafadoras de gas,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Diseno metodologico de sistema de informacion para seguimiento de proyectos de electrificacion rural,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Analisis y diseno de sistema de control de suministros combustibles y mantenimiento naviero,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Especificacion formal de requerimientos y prototipado para modernizacion de registros civiles,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Sistema de informacion gerencial para control de muestras medicas y desempeno de visitadores en farmaceuticas,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Analisis y diseno de sistema de trazabilidad de lotes y control de calidad en plantas embotelladoras,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Diseno de sistema administrativo para tasacion de garantias prestamos prendarios y remates comerciales,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Modelado de reglas de negocio para sistema de liquidacion de planillas por destajo en confeccion textil,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Sistema de informacion para administracion de terrenos adjudicaciones y servicios en parques industriales,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Ingenieria de requerimientos y diseno arquitectonico para sistema de catalogacion y prestamo bibliotecario,Analisis y Diseno de Sistemas; Ingenieria de Requerimientos; Sistemas ERP,Ing. Diego Fernando
+Diseno de Data Mart departamental y flujos ETL para analisis de rentabilidad de lineas de productos,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Afinamiento de rendimiento y optimizacion de planes de ejecucion de consultas en motores PostgreSQL,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Modelado de base de datos bitemporal para auditoria historica de cambios en escalas salariales,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Configuracion de replicacion logica bidireccional para sincronizacion de bases de datos entre sucursales,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Diseno de base de datos orientada a documentos para gestion de expedientes de tramites flexibles,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Particionamiento declarativo por rangos de fecha en tablas transaccionales de facturacion masiva,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Arquitectura de almacen de datos Data Warehouse para indicadores de camas e internaciones hospitalarias,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Modelado relacional estricto e integridad referencial para registro unico de propiedad vehicular,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Implementacion de enmascaramiento dinamico de columnas sensibles en SQL para entornos de desarrollo,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Indexacion invertida GIN y busqueda de texto completo nativa en PostgreSQL para catalogos extensos,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Estructuras de datos en memoria con Redis para manejo de colas de prioridad y sesiones efimeras,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Recuperacion a un punto en el tiempo PITR mediante archivado continuo de registros WAL en PostgreSQL,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Migracion automatizada y saneamiento de datos desde hojas de calculo dispersas hacia SQL Server,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Modelado de base de datos espacial con topologia de redes para catastro de tuberias de agua potable,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Diseno de indices cubrientes y parciales para aceleracion de cierres contables mensuales en SQL,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Consultas federadas mediante Foreign Data Wrappers para integracion de bases de datos institucionales,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Implementacion de transacciones distribuidas con confirmacion en dos fases para transferencias entre bancos,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Modelado de base de datos de grafos para deteccion de vinculos ocultos en fraudes de seguros,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Automatizacion de recoleccion de basura VACUUM y reindexacion programada en bases de datos de alta carga,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Diseno dimensional en esquema constelacion para inteligencia de negocios en empresas agroindustriales,Base de Datos; Modelado de Datos; Sistemas Transaccionales,Lic. Gabriela Paz
+Desarrollo de backend asincrono no bloqueante con FastAPI para sistema de subastas en linea,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Arquitectura de microservicios desacoplados con mensajeria AMQP para plataforma de reservas hoteleras,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Servidor centralizado de control de acceso basado en roles RBAC y permisos granulares mediante API,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Implementacion del patron Circuit Breaker y tolerancia a fallos en comunicacion entre microservicios,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Estandarizacion y empaquetado de servicios backend multi-lenguaje mediante contenedores Docker ligeros,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Motor backend de calculo tarifario dinamico e integracion con servicios de mapas para entregas,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Implementacion del patron CQRS separando operaciones de lectura y escritura en servicios de inventario,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Servicio trabajador en segundo plano con Celery y Redis para generacion masiva de certificados en PDF,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Capa de integracion backend mediante adaptadores REST para modernizacion de sistemas bancarios legados,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+API transaccional segura con idempotencia garantizada para procesamiento de ordenes de pago,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Implementacion de cache distribuida con invalidacion automatica para acelerar respuestas en APIs de consulta,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Orquestacion de microservicios en Python y PostgreSQL aislados en redes virtuales de Docker Compose,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Middleware de auditoria y trazabilidad de peticiones HTTP para cumplimiento normativo en servicios web,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Servicio sincronizador de stock e inventario en tiempo real entre tiendas fisicas y comercio electronico,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Perfilado de rendimiento y eliminacion de cuellos de botella de concurrencia en servidores Gunicorn y Uvicorn,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Microservicio de generacion y validacion temporal de codigos OTP para confirmacion de transacciones,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Diseno de backend bajo arquitectura limpia y puertos y adaptadores para motor de promociones comerciales,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Entorno aislado en contenedores Docker para compilacion y ejecucion segura de codigo enviado por usuarios,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Gestor de Webhooks salientes con cola de reintentos exponenciales para notificacion de eventos a terceros,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Optimizacion de consultas ORM y paginacion basada en cursores para endpoints REST de alto volumen,Desarrollo Backend; Arquitectura de Microservicios; Contenedores Docker,Ing. Carlos Vilela
+Aplicacion web progresiva con almacenamiento local para lectura de medidores de servicios en zonas sin senal,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Diseno de interfaz de usuario accesible y adaptable para plataforma de telemedicina en adultos mayores,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Cotizador web interactivo en tiempo real para armado personalizado de paquetes de viajes turisticos,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Aplicacion web SPA en React con gestion de estado global para monitoreo de ordenes de produccion,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Visor web cartografico interactivo para consulta ciudadana de catastros y uso de suelo municipal,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Comandera digital en aplicacion web progresiva para toma de pedidos en restaurantes con envio a cocina,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Construccion de libreria de componentes UI estandarizados para unificar portales web universitarios,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Plataforma web de aula virtual de bajo consumo de datos optimizada para conexiones rurales lentas,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Interfaz web tipo hoja de calculo editable en navegador para carga rapida de presupuestos de obra,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Catalogo digital en aplicacion web progresiva con filtrado instantaneo offline para vendedores de repuestos,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Optimizacion de flujo de pago y experiencia de usuario en tienda virtual de productos artesanales,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Pizarra web colaborativa en el navegador para revision de disenos y anotaciones en equipo,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Tablero de control gerencial personalizable mediante paneles arrastrables y graficos interactivos en React,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Agenda web progresiva con sincronizacion automatica al recuperar conexion para visitadores sociales,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Plataforma web interactiva con ejercicios visuales arrastrables para aprendizaje de matematicas en primaria,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Mapa interactivo de seleccion y reserva de asientos en tiempo real para teatros y eventos culturales,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Audioguia web progresiva instalable mediante codigo QR con reproduccion sin internet para museos,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Portal web de gobierno abierto con visualizaciones dinamicas de ejecucion presupuestaria para ciudadanos,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Optimizacion de velocidad de carga y compresion de activos web en portales periodisticos de alto trafico,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Arquitectura de micro-frontends modulares para integracion de multiples equipos en portales bancarios,Desarrollo Web; Aplicaciones Web Progresivas; Interfaces de Usuario,Ing. Valeria Paredes
+Aplicacion movil multiplataforma con rastreo GPS para supervision de rutas de visitadores medicos,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Aplicacion movil con formularios dinamicos offline para levantamiento de censos agropecuarios en campo,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Sistema movil de validacion y cobro de pasajes mediante tecnologia sin contacto NFC en buses urbanos,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Aplicacion movil de auxilio mecanico en carretera con geolocalizacion de gruas y talleres cercanos,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Aplicativo movil para repartidores con confirmacion de entrega mediante fotografia georreferenciada y firma,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Sistema movil de seguridad infantil con configuracion de geocercas y alertas de salida de perimetro,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Guia movil de senderismo y ecoturismo con mapas topograficos sin conexion y brujula integrada,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Aplicacion movil para solicitud de recoleccion domiciliaria de materiales reciclables por geolocalizacion,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Gestor movil multiplataforma de finanzas estudiantiles con presupuestos y alertas de vencimiento de pagos,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Aplicacion movil de vigilancia comunitaria para reporte temprano de focos de calor e incendios con GPS,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Asistente movil en ruta para transportistas de carga con alertas de estado de carreteras y bloqueos,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Aplicacion movil accesible controlada por comandos de voz y gestos para personas con baja vision,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Bitacora movil de mantenimiento industrial mediante lectura de etiquetas QR adheridas a cada maquina,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Aplicacion movil de pedidos de gas licuado con seguimiento en mapa del camion distribuidor en el barrio,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Control movil de asistencia para personal externo con validacion de radio geografico permitido por GPS,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Comunidad movil universitaria para uso compartido de transporte carpooling con coincidencia de rutas,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Aplicacion movil deportiva para ciclistas con grabacion de altimetria recorrido GPS y velocidad media,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Terminal movil de consulta de infracciones y verificacion de placas para inspectores municipales de transito,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Directorio movil geolocalizado de ferias barriales y productores locales con rutas de llegada,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Aplicacion movil multiplataforma para canje y administracion de vales de consumo corporativos por QR,Desarrollo Movil; Programacion Multiplataforma; Geolocalizacion,Ing. Rodrigo Vargas
+Red de sensores IoT de humedad de suelo e inclinacion para alerta temprana de deslizamientos en laderas,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Automatizacion del proceso de dosificacion de cloro y control de turbidez en plantas de agua rurales,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Dispositivo vestible con acelerometro y oximetro para deteccion de caidas y monitoreo de signos vitales,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Nodos acusticos embebidos con transmision LoRa para deteccion de motosierras y tala ilegal en bosques,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Telegestion de alumbrado publico inteligente con regulacion de intensidad luminica segun presencia,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Sistema embebido de control higrometrico y termico para camaras de maduracion de quesos artesanales,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Baston electronico asistivo con sensores ultrasonicos y retroalimentacion haptica para personas ciegas,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Telemetria IoT de nivel de diesel en tanques estacionarios de generadores de respaldo en telecomunicaciones,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Automatizacion de sistema de bombeo fotovoltaico y fertirriego programado para parcelas agricolas,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Monitoreo no invasivo de peso temperatura y sonido interno en colmenas apicolas mediante nodos IoT,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Sistema embebido de pesaje continuo en cintas transportadoras de mineral mediante celdas de carga,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Cerradura biometrica embebida con registro de accesos en tiempo real por protocolo MQTT para laboratorios,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Analizador IoT de consumo electrico trifasico y factor de potencia para tableros industriales,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Automatizacion de cinta clasificadora de productos por peso y tamano mediante microcontroladores y actuadores,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Registrador IoT de impactos vibraciones e inclinacion para monitoreo de transporte de equipos medicos,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Estacion hidrometrica autonoma alimentada por panel solar con envio de datos por red celular GSM,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Sistema automatizado de deteccion de monoxido de carbono y activacion de extractores en estacionamientos,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Control remoto de apertura gradual de compuertas en canales de riego mediante actuadores electromecanicos,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Contenedor termico inteligente con monitoreo GPS y control Peltier para traslado de muestras biologicas,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Automatizacion de control de acceso y corte de energia por habitacion en hoteles mediante tarjetas RFID,Internet de las Cosas; Sistemas Embebidos; Automatizacion,Lic. Fernando Pinto
+Despliegue automatizado de cluster Kubernetes en alta disponibilidad sobre infraestructura de servidores Linux,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Integracion de analisis de seguridad estatico y escaneo de contenedores en pipelines DevSecOps con GitLab CI,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Granja distribuida de procesamiento asincrono en la nube para transcodificacion masiva de video educativo,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Gestion unificada de identidades y control de acceso de minimo privilegio IAM en arquitecturas Cloud,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Plataforma de ingenieria del caos Chaos Engineering para pruebas de resiliencia ante caida de nodos en la nube,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Implementacion de nube de almacenamiento de objetos distribuida y redundante con MinIO en servidores locales,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Automatizacion de configuracion y despliegue de servidores de aplicaciones mediante roles de Ansible,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Pipeline de ingestion de eventos en tiempo real mediante arquitectura Serverless en la nube,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Monitoreo sintetico distribuido geograficamente para verificacion continua de latencia en portales web,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Despliegue de registro privado de contenedores Harbor con firma de imagenes y escaneo de vulnerabilidades,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Automatizacion de conmutacion por error Failover multi-region en la nube para continuidad de sistemas criticos,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Aceleracion de pipelines de integracion continua mediante cache distribuida de dependencias y compilacion,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Servidor centralizado de configuracion dinamica y Feature Flags para despliegues progresivos en la nube,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Implementacion de base de datos SQL distribuida tolerante a particiones de red en clusters de contenedores,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Trazabilidad distribuida de extremo a extremo con OpenTelemetry y Jaeger para diagnostico de microservicios,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Autoescalado horizontal de pods en Kubernetes basado en metricas personalizadas de longitud de cola,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Sistema de sincronizacion y distribucion rapida de imagenes de sistema operativo para laboratorios de computo,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Aprovisionamiento de entornos de desarrollo remotos estandarizados en contenedores bajo demanda,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Gobernanza y validacion automatica de manifiestos de despliegue en Kubernetes mediante politicas como codigo,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Estrategia de despliegue Canary automatizado con reversion instantanea ante incremento de tasa de errores,Cloud Computing; DevOps; Sistemas Distribuidos,Lic. Pamela Suarez
+Algoritmo de busqueda tabu para optimizacion de rutas de transporte escolar con ventanas de tiempo,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Modelo numerico de simulacion de dispersion de contaminantes en cauces fluviales mediante diferencias finitas,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Optimizacion de corte unidimensional de barras de acero de construccion para minimizacion de merma,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Simulacion de colas de prioridad y asignacion de pistas en operaciones de trafico aereo aeroportuario,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Algoritmo genetico multiobjetivo para reconfiguracion optima de redes de distribucion de energia electrica,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Optimizacion matematica de portafolios de inversion financiera bajo el modelo de media-varianza de Markowitz,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Simulacion de eventos discretos para dimensionamiento optimo de ventanillas de atencion en bancos,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Algoritmo exacto de ramificacion y acotacion Branch and Bound para secuenciacion de tareas en taller,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Simulacion microscopica mediante automatas celulares para evacuacion de emergencia en tuneles viales,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Localizacion optima de centros de acopio agricola utilizando el problema de la p-mediana en grafos,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Heuristica constructiva para programacion de flota de buses interdepartamentales y asignacion de conductores,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Simulacion de Monte Carlo para evaluacion de confiabilidad y disponibilidad en topologias de red malladas,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Algoritmo de flujo de costo minimo en grafos para planificacion de transporte de aridos en construccion,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Optimizacion por enjambre de particulas PSO para sintonizacion matematica de controladores industriales,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Modelo de simulacion de inventario estocastico para prevencion de quiebres de stock en estaciones de servicio,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Indexacion espacial mediante arboles Quadtree y R-Tree para deteccion rapida de colisiones en 2D,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Programacion dinamica estocastica para optimizacion del despacho hidrotermico de generacion electrica,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Implementacion de algoritmos de compresion sin perdida LZW y aritmetica para archivos de telemetria,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Simulacion de trafico en rotondas e intersecciones urbanas para evaluacion de pasos a desnivel,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Resolucion del problema del agente viajero multiple mTSP para zonificacion de lecturas de medidores,Algoritmia Avanzada; Optimizacion Matematica; Simulacion de Sistemas,Ing. Martin Lopez
+Simulador 3D de operacion de grua torre y maniobras de izaje de carga para seguridad en construccion,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Aplicacion de realidad aumentada para visualizacion de planos de tuberias y ductos ocultos en paredes,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Entorno inmersivo en realidad virtual para terapia de exposicion controlada al miedo a las alturas,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Simulador tridimensional interactivo de anatomia y diseccion veterinaria para practicas universitarias,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Reconstruccion fotogrametrica en 3D de piezas arqueologicas precolombinas para exhibicion web en WebGL,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Guia en realidad aumentada para soldadura y montaje de componentes en placas de circuito impreso,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Simulador interactivo 3D de protocolos de triaje y atencion prehospitalaria en escenarios de accidentes,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Visualizador grafico en OpenGL de trazado de rayos para estudio de lentes opticas y reflexion de luz,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Configurador arquitectonico 3D en tiempo real para recorrido virtual de departamentos en preventa,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Videojuego serio en 3D para capacitacion en identificacion de peligros y sostenimiento en mineria subterranea,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Animacion de avatares tridimensionales en tiempo real para interpretacion visual de cuentos infantiles,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Simulador virtual de maniobras de corte y seccionamiento en subestaciones electricas de alta tension,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Aplicacion de realidad aumentada para previsualizacion de implantes y tratamientos de ortodoncia dental,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Reconstruccion tridimensional y simulacion cinematica de accidentes de transito para peritaje vial,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Laboratorio interactivo 3D de mecanica de fluidos y caudal en tuberias para estudiantes de ingenieria,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Catalogo botánico interactivo con realidad aumentada para reconocimiento de arboles nativos en parques,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Simulador tridimensional de manejo de montacargas y estiba segura de pallets en almacenes industriales,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Renderizado 3D de modelos digitales de elevacion del terreno para visualizacion de cuencas e inundaciones,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Manual interactivo en realidad aumentada para desarme y mantenimiento de cajas de transmision mecanica,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena
+Simulador de vuelo de drones en entornos 3D generados proceduralmente para entrenamiento de fotogrametria,Realidad Aumentada; Graficacion por Computadora; Simuladores 3D,Ing. Claudia Urena

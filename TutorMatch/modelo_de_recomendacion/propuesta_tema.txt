@@ -1,0 +1,195 @@
+PROPUESTA DE TEMA DE PROYECTO DE GRADO
+
+DATOS DEL ESTUDIANTE:
+Nombre: [Tu Nombre Completo]
+Carrera: Ingeniería de Sistemas
+Semestre: 8vo Semestre
+Código de Estudiante: [Tu Código]
+Correo: [tu.correo@universidad.edu]
+Teléfono: [Tu número de teléfono]
+
+TÍTULO DEL PROYECTO:
+"Sistema web de reconocimiento de cáncer a través de redes neuronales con base de datos PostgreSQL"
+
+TUTOR PROPUESTO:
+Lic. Pamela Suarez
+
+FECHA DE PRESENTACIÓN:
+16 de noviembre de 2026
+
+================================================================================
+1. DESCRIPCIÓN DEL PROBLEMA
+================================================================================
+
+El diagnóstico del cáncer es un proceso complejo que requiere la interpretación 
+de imágenes médicas por especialistas. Actualmente, este proceso puede ser 
+lento y estar sujeto a errores humanos debido a la fatiga del personal médico 
+y la alta demanda de pacientes.
+
+La falta de herramientas automatizadas que apoyen el proceso de detección 
+temprana de cáncer representa una oportunidad para aplicar técnicas de 
+inteligencia artificial y redes neuronales para mejorar la precisión y velocidad 
+del diagnóstico.
+
+================================================================================
+2. OBJETIVOS
+================================================================================
+
+OBJETIVO GENERAL:
+Desarrollar un sistema web que utilice redes neuronales para el reconocimiento 
+automático de cáncer en imágenes médicas, con persistencia de datos en PostgreSQL.
+
+OBJETIVOS ESPECÍFICOS:
+- Diseñar e implementar una arquitectura de red neuronal convolucional (CNN) 
+  para el procesamiento de imágenes médicas.
+- Desarrollar una interfaz web para la carga y visualización de resultados.
+- Implementar una base de datos PostgreSQL para el almacenamiento de historiales 
+  médicos y resultados de análisis.
+- Integrar módulos de autenticación y control de acceso para la seguridad de 
+  datos sensibles.
+- Evaluar la precisión del sistema utilizando conjuntos de datos validados 
+  médicamente.
+
+================================================================================
+3. JUSTIFICACIÓN
+================================================================================
+
+El cáncer es una de las principales causas de mortalidad a nivel mundial. La 
+detección temprana aumenta significativamente las posibilidades de tratamiento 
+exitoso. La aplicación de redes neuronales en el análisis de imágenes médicas 
+ha demostrado resultados prometedores en estudios recientes, alcanzando precisiones 
+superiores al 90% en ciertos tipos de cáncer.
+
+Este proyecto contribuirá al campo de la salud mediante el desarrollo de una 
+herramienta accesible que puede ser utilizada por instituciones médicas como 
+apoyo en el proceso de diagnóstico, reduciendo tiempos y mejorando la precisión.
+
+================================================================================
+4. ALCANCE
+================================================================================
+
+El sistema incluirá:
+- Módulo de carga de imágenes médicas (formatos DICOM, PNG, JPG)
+- Procesamiento de imágenes mediante redes neuronales
+- Interfaz web responsive para usuarios médicos
+- Base de datos PostgreSQL con información de pacientes y resultados
+- Sistema de autenticación y roles de usuario
+- Reportes de análisis y visualización de resultados
+- Historial de diagnósticos por paciente
+
+El sistema NO incluirá:
+- Reemplazo total del diagnóstico médico
+- Prescripción de tratamientos
+- Conexión directa con equipos médicos (pacs)
+- Telemedicina en tiempo real
+
+================================================================================
+5. METODOLOGÍA
+================================================================================
+
+El proyecto se desarrollará siguiendo una metodología ágil (Scrum) con las 
+siguientes fases:
+
+FASE 1: Investigación y Recolección de Datos (4 semanas)
+- Investigación de arquitecturas de CNN para diagnóstico médico
+- Adquisición de conjuntos de datos validados (dataset público)
+- Revisión de literatura sobre detección de cáncer
+
+FASE 2: Diseño de la Arquitectura (3 semanas)
+- Diseño de la red neuronal
+- Diseño del esquema de base de datos
+- Diseño de la interfaz web (wireframes)
+
+FASE 3: Desarrollo del Modelo de IA (6 semanas)
+- Implementación de la CNN en PyTorch/TensorFlow
+- Entrenamiento y validación del modelo
+- Optimización de hiperparámetros
+
+FASE 4: Desarrollo del Sistema Web (8 semanas)
+- Backend con API REST (FastAPI/Flask)
+- Frontend con framework moderno (React/Vue)
+- Integración con PostgreSQL
+- Implementación de autenticación
+
+FASE 5: Integración y Pruebas (4 semanas)
+- Integración de componentes
+- Pruebas unitarias y de integración
+- Pruebas con usuarios finales (si es posible)
+
+FASE 6: Documentación y Entrega (3 semanas)
+- Documentación técnica
+- Manual de usuario
+- Preparación de defensa
+
+================================================================================
+6. TECNOLOGÍAS PROPUESTAS
+================================================================================
+
+- Frontend: React.js / Vue.js
+- Backend: FastAPI (Python) o Flask
+- Base de Datos: PostgreSQL
+- Machine Learning: PyTorch o TensorFlow
+- Gestión de Versiones: Git
+- Contenedorización: Docker
+- Cloud (opcional): AWS o Azure
+
+================================================================================
+7. CRONOGRAMA ESTIMADO
+================================================================================
+
+Semana 1-4:   Investigación y datos
+Semana 5-7:   Diseño de arquitectura
+Semana 8-13:  Desarrollo del modelo de IA
+Semana 14-21: Desarrollo del sistema web
+Semana 22-25: Integración y pruebas
+Semana 26-28: Documentación y entrega
+
+Tiempo total estimado: 28 semanas (aproximadamente 7 meses)
+
+================================================================================
+8. RECURSOS NECESARIOS
+================================================================================
+
+HARDWARE:
+- Computadora personal con GPU (para entrenamiento del modelo)
+- Acceso a internet para investigación
+
+SOFTWARE:
+- Licencias de software open source (sin costo)
+- PostgreSQL (open source)
+- Python y frameworks de ML (open source)
+
+HUMANOS:
+- Estudiante desarrollador
+- Tutor de proyecto
+- (Opcional) Asesor médico para validación de resultados
+
+================================================================================
+9. REFERENCIAS BIBLIOGRÁFICAS
+================================================================================
+
+[1] Esteva, A., et al. (2017). "Dermatologist-level classification of skin cancer 
+    with deep neural networks". Nature, 542(7639), 115-118.
+
+[2] Litjens, G., et al. (2017). "A survey on deep learning in medical image analysis". 
+    Medical Image Analysis, 42, 60-88.
+
+[3] Goodfellow, I., Bengio, Y., & Courville, A. (2016). "Deep Learning". MIT Press.
+
+[4] Chollet, F. (2017). "Deep Learning with Python". Manning Publications.
+
+================================================================================
+10. ANEXOS
+================================================================================
+
+ANEXO A: Diagrama de arquitectura del sistema (pendiente)
+ANEXO B: Esquema preliminar de base de datos (pendiente)
+ANEXO C: Prototipos de interfaz (pendiente)
+
+================================================================================
+
+FIRMA DEL ESTUDIANTE: _________________________
+
+FECHA: _________________________
+
+================================================================================

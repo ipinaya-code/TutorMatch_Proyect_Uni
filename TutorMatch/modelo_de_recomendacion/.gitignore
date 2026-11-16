@@ -1,0 +1,57 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+
+# Distribuciones y empaquetado
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Entornos virtuales
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Variables de entorno locales
+.env
+!.env.example
+
+# IDEs y Editores
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints
+
+# Logs y bases de datos SQLite temporales
+*.log
+*.sqlite
+*.tmp
+
+# Archivos de Sistema Operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Artefactos pesados generados por el entrenamiento (mantener limpios los repos)
+artefactos/*.pth
+!artefactos/.gitkeep
+
+# Pruebas y Cobertura
+.pytest_cache/
+.coverage
+htmlcov/
+

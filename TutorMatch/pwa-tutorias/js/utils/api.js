@@ -2,6 +2,7 @@
 // CLIENTE API REST: TutorMatch — EMI Cochabamba
 // ==============================================================
 export const API_BASE_URL = 'http://localhost:8000/api/v1'
+export const API_ORIGIN = API_BASE_URL.replace(/\/api\/v1$/, '')
 
 async function peticion(endpoint, metodo = 'GET', cuerpo = null, esFormData = false) {
   const controller = new AbortController()
@@ -58,15 +59,19 @@ export async function apiRecomendarRevisores(tituloProyecto, tutorId) {
   return await peticion(`/ia/recomendar-revisores?titulo=${encodeURIComponent(tituloProyecto)}&tutor_id=${tutorId}`)
 }
 
+export async function apiObtenerDocentes() {
+  return await peticion('/docentes')
+}
+
 // --------------------------------------------------------------
 // PROPUESTAS DE PROYECTO (Envío con PDF y plazo 72h)
 // --------------------------------------------------------------
-export async function apiEnviarPropuesta({ estudianteId, docenteTutorId, tituloTentativo, archivoPdf }) {
+export async function apiEnviarPropuesta({ estudianteId, docenteTutorIds, tituloTentativo, archivoPdf }) {
   const formData = new FormData()
   formData.append('estudiante_id', estudianteId)
-  formData.append('docente_tutor_id', docenteTutorId)
+  formData.append('docente_tutor_ids', docenteTutorIds.join(','))
   formData.append('titulo_tentativo', tituloTentativo)
-  if (archivoPdf) formData.append('archivo_pdf', archivoPdf)
+  formData.append('archivo_pdf', archivoPdf)
 
   return await peticion('/proyectos/enviar', 'POST', formData, true)
 }
@@ -91,4 +96,22 @@ export async function apiResponderPropuestaDocente(docenteId, proyectoId, accion
 
 export async function apiObtenerRevisoresProyecto(proyectoId) {
   return await peticion(`/proyectos/${proyectoId}/revisores`)
+}
+
+export async function apiListarNotificaciones(usuarioId) {
+  return await peticion(`/usuarios/${usuarioId}/notificaciones`)
+}
+
+export async function apiMarcarNotificacionLeida(usuarioId, notificacionId) {
+  return await peticion(`/usuarios/${usuarioId}/notificaciones/${notificacionId}/leida`, 'PATCH')
+}
+
+// --------------------------------------------------------------
+// ACTUALIZACIÓN DEL PERFIL DOCENTE (ESPECIALIDADES Y CURSOS EN BD)
+// --------------------------------------------------------------
+export async function apiActualizarPerfilDocente(docenteId, especialidades, cursos = '') {
+  return await peticion(`/docentes/${docenteId}/perfil`, 'PUT', {
+    especialidades: Array.isArray(especialidades) ? especialidades.join(', ') : especialidades,
+    cursos_dictados: Array.isArray(cursos) ? cursos.join(', ') : cursos
+  })
 }

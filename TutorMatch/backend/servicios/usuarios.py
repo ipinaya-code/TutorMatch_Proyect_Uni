@@ -92,6 +92,31 @@ def listar_docentes_con_perfil():
     conexion.close()
     return docentes
 
+def obtener_especialidades_docentes():
+    """
+    Obtiene el catálogo vigente de especialidades desde PostgreSQL.
+    La clave del resultado es el nombre oficial del docente.
+    """
+    conexion = obtener_conexion()
+    cursor = conexion.cursor()
+    cursor.execute("""
+        SELECT u.nombre, COALESCE(p.especialidades, '') AS especialidades
+        FROM usuarios u
+        LEFT JOIN docente_perfiles p ON p.docente_id = u.id
+        WHERE u.rol IN ('docente', 'revisor')
+    """)
+    resultado = {
+        fila["nombre"]: [
+            especialidad.strip()
+            for especialidad in fila["especialidades"].split(",")
+            if especialidad.strip()
+        ]
+        for fila in cursor.fetchall()
+    }
+    cursor.close()
+    conexion.close()
+    return resultado
+
 def actualizar_especialidades_docente(docente_id: int, cursos: str, especialidades: str):
     """
     Permite al docente actualizar sus cursos dictados y especialidades desde su perfil.

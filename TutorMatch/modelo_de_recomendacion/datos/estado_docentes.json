@@ -1,0 +1,62 @@
+{
+  "Ing. Marcelo Quiroga": {
+    "pupilos_asignados": 0,
+    "especialidades": ["Inteligencia Artificial", "Visión por Computadora", "Redes Neuronales"]
+  },
+  "Ing. Roberto Mendoza": {
+    "pupilos_asignados": 0,
+    "especialidades": ["Desarrollo Web", "Fullstack", "Arquitectura de Software"]
+  },
+  "Ing. Patricia Soria": {
+    "pupilos_asignados": 0,
+    "especialidades": ["Ciberseguridad", "Redes", "Hacking Ético", "Infraestructura"]
+  },
+  "Ing. Carlos Arce": {
+    "pupilos_asignados": 0,
+    "especialidades": ["Internet de las Cosas (IoT)", "Robótica", "Sistemas Embebidos"]
+  },
+  "Ing. Valeria Torrico": {
+    "pupilos_asignados": 0,
+    "especialidades": ["Ciencia de Datos", "Machine Learning", "Análisis Estadístico"]
+  },
+  "Ing. Fernando Rojas": {
+    "pupilos_asignados": 0,
+    "especialidades": ["Cloud Computing", "DevOps", "Microservicios", "Kubernetes"]
+  },
+  "Ing. Andrea Morales": {
+    "pupilos_asignados": 0,
+    "especialidades": ["Gestión de Proyectos TI", "Metodologías Ágiles", "Scrum", "ITIL"]
+  },
+  "Lic. Gabriela Paz": {
+    "pupilos_asignados": 0,
+    "especialidades": ["Bases de Datos", "Big Data", "SQL/NoSQL", "Minería de Datos"]
+  },
+  "Ing. Hugo Zeballos": {
+    "pupilos_asignados": 0,
+    "especialidades": ["Desarrollo Móvil (Android/iOS)", "Flutter", "React Native"]
+  },
+  "Ing. Claudia Medina": {
+    "pupilos_asignados": 0,
+    "especialidades": ["Bioinformática", "Sistemas de Salud Digital", "Telemedicina"]
+  },
+  "Ing. Diego Flores": {
+    "pupilos_asignados": 0,
+    "especialidades": ["Sistemas Distribuidos", "Blockchain", "Criptografía Aplicada"]
+  },
+  "Ing. Paola Vargas": {
+    "pupilos_asignados": 0,
+    "especialidades": ["Realidad Virtual", "Realidad Aumentada", "Videojuegos"]
+  },
+  "Ing. Sergio Camacho": {
+    "pupilos_asignados": 0,
+    "especialidades": ["Automatización Industrial", "PLC", "SCADA", "Domótica"]
+  },
+  "Ing. Lucia Benitez": {
+    "pupilos_asignados": 0,
+    "especialidades": ["Procesamiento de Lenguaje Natural (NLP)", "Chatbots", "LLMs"]
+  },
+  "Ing. Javier Navarro": {
+    "pupilos_asignados": 0,
+    "especialidades": ["Auditoría de Sistemas", "Calidad de Software", "Testing QA"]
+  }
+}
